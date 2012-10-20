@@ -396,7 +396,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="2001">
-						<description>enable video info</description>
+						<description>Disable XBMC logo in Home</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -404,12 +404,12 @@
 						<focusedcolor>white</focusedcolor>
 						<label>NoLogo</label>
 						<onclick>Skin.ToggleSetting(NoLogo)</onclick>
-						<selected>!Skin.HasSetting(NoLogo)</selected>
+						<selected>Skin.HasSetting(NoLogo)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="2002">
-						<description>enable video info</description>
+						<description>disable floor.png in Home</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -417,12 +417,12 @@
 						<focusedcolor>white</focusedcolor>
 						<label>NoFloor</label>
 						<onclick>Skin.ToggleSetting(NoFloor)</onclick>
-						<selected>!Skin.HasSetting(NoFloor)</selected>
+						<selected>Skin.HasSetting(NoFloor)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="2003">
-						<description>enable video info</description>
+						<description>lower menu bar</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -430,7 +430,20 @@
 						<focusedcolor>white</focusedcolor>
 						<label>LowerMenu</label>
 						<onclick>Skin.ToggleSetting(LowerMenu)</onclick>
-						<selected>!Skin.HasSetting(LowerMenu)</selected>
+						<selected>Skin.HasSetting(LowerMenu)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="2004">
+						<description>enable CDArt in Home</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>CdArtHome</label>
+						<onclick>Skin.ToggleSetting(CdArtHome)</onclick>
+						<selected>Skin.HasSetting(CdArtHome)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>					
