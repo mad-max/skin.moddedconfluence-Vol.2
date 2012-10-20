@@ -13,6 +13,7 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>Skin.HasSetting(NoFloor)</visible>
 		</control>
 		<control type="image">
 			<description>LOGO</description>
@@ -30,6 +31,7 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>60</posy>
+			<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -88,6 +90,7 @@
 		<control type="group">
 			<posx>490r</posx>
 			<posy>70</posy>
+			<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			<visible>Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -232,6 +235,7 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>50</posy>
+			<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -457,6 +461,7 @@
 			<posx>545r</posx>
 			<posy>370</posy>
 			<animation effect="slide" start="0,0" end="365,0" time="300" condition="!Player.HasMedia">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
@@ -731,6 +736,7 @@
 				<posy>70</posy>
 				<onup>9000</onup>
 				<ondown>9002</ondown>
+				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 				<control type="grouplist" id="9010">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9010</onleft>
@@ -794,6 +800,7 @@
 				<width>1480</width>
 				<height>75</height>
 				<texture border="0,6,0,6">HomeBack.png</texture>
+				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -801,8 +808,10 @@
 				<width>1280</width>
 				<height>6</height>
 				<texture>HomeOverlay1.png</texture>
+				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			</control>
 			<control type="fixedlist" id="9000">
+				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 				<posx>-110</posx>
 				<posy>5</posy>
 				<width>1500</width>
@@ -876,7 +885,7 @@
 						<width>290</width>
 						<height>60</height>
 						<font>font_MainMenu</font>
-						<textcolor>blue</textcolor>
+						<textcolor>white</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -964,6 +973,7 @@
 				<width>128</width>
 				<height>50</height>
 				<texture>SideFade.png</texture>
+				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			</control>
 			<control type="image">
 				<posx>128r</posx>
@@ -971,6 +981,7 @@
 				<width>128</width>
 				<height>60</height>
 				<texture flipx="true">SideFade.png</texture>
+				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			</control>
 		</control>
 		<control type="group" id="9002">
