@@ -1088,6 +1088,7 @@
 				<width>1380</width>
 				<height>50</height>
 				<texture>ContentPanel.png</texture>
+				<visible>Skin.HasSetting(LowerMenu)</visible>
 			</control>			
 			<control type="rss">
 				<description>RSS feed</description>
