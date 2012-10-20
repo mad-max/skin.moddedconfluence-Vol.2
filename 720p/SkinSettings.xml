@@ -472,7 +472,20 @@
 						<selected>Skin.HasSetting(NoArrow)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>					
+					</control>
+					<control type="radiobutton" id="2006">
+						<description>disable arrows for recently added</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>FanartInHome</label>
+						<onclick>Skin.ToggleSetting(FanartInHome)</onclick>
+						<selected>Skin.HasSetting(FanartInHome)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>						
 					<control type="radiobutton" id="203">
 						<description>enable music info</description>
 						<width>750</width>

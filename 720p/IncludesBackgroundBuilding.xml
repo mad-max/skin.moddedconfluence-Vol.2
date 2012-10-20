@@ -52,6 +52,17 @@
 			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + ![Window.IsVisible(PVR) + [Control.IsVisible(11) | Control.IsVisible(12)]]</visible>
 			<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
 		</control>
+		<control type="image">
+			<description>Fanart Image for Artist</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<visible>!IsEmpty(Player.Art(fanart)) + Skin.HasSetting(FanartInHome)</visible>
+			<fadetime>600</fadetime>
+		</control>			
 		<control type="videowindow">
 			<posx>0</posx>
 			<posy>0</posy>
