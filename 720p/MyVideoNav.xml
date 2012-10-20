@@ -57,6 +57,7 @@
 		<control type="group">
 			<posx>-250</posx>
 			<include>SideBladeLeft</include>
+			<visible>!Skin.HasSetting(KioskMode)</visible>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>
 				<posy>110</posy>

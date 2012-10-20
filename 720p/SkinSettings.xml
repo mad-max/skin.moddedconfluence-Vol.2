@@ -355,6 +355,19 @@
 						<selected>Skin.HasSetting(CdArtVis)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="1002">
+						<description>enable CDArt in Visualization</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>KioskMode</label>
+						<onclick>Skin.ToggleSetting(KioskMode)</onclick>
+						<selected>Skin.HasSetting(KioskMode)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>					
 				</control>
 				<control type="scrollbar" id="60">
