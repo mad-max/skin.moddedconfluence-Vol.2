@@ -225,7 +225,7 @@
 					<texturefocus>arrow-big-left.png</texturefocus>
 					<texturenofocus>arrow-big-left.png</texturenofocus>
 					<onclick>Control.Move(8000,-1)</onclick>
-					<visible>Control.HasFocus(8000) + Container(8000).HasPrevious</visible>
+					<visible>Control.HasFocus(8000) + Container(8000).HasPrevious + !Skin.HasSetting(NoArrow)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
@@ -237,7 +237,7 @@
 					<texturefocus>arrow-big-right.png</texturefocus>
 					<texturenofocus>arrow-big-right.png</texturenofocus>
 					<onclick>Control.Move(8000,1)</onclick>
-					<visible>Control.HasFocus(8000) + Container(8000).HasNext</visible>
+					<visible>Control.HasFocus(8000) + Container(8000).HasNext + !Skin.HasSetting(NoArrow)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
@@ -488,7 +488,7 @@
 					<texturefocus>arrow-big-left.png</texturefocus>
 					<texturenofocus>arrow-big-left.png</texturenofocus>
 					<onclick>Control.Move(8001,-1)</onclick>
-					<visible>Control.HasFocus(8001) + Container(8001).HasPrevious</visible>
+					<visible>Control.HasFocus(8001) + Container(8001).HasPrevious + !Skin.HasSetting(NoArrow)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
@@ -500,7 +500,7 @@
 					<texturefocus>arrow-big-right.png</texturefocus>
 					<texturenofocus>arrow-big-right.png</texturenofocus>
 					<onclick>Control.Move(8001,1)</onclick>
-					<visible>Control.HasFocus(8001) + Container(8001).HasNext</visible>
+					<visible>Control.HasFocus(8001) + Container(8001).HasNext + !Skin.HasSetting(NoArrow)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
