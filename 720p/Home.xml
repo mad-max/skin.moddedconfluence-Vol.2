@@ -1073,6 +1073,14 @@
 			<posy>33r</posy>
 			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<description>RSS background</description>
+				<posx>-10</posx>
+				<posy>-5</posy>
+				<width>1380</width>
+				<height>50</height>
+				<texture>ContentPanel.png</texture>
+			</control>			
 			<control type="rss">
 				<description>RSS feed</description>
 				<posx>100</posx>
@@ -1095,15 +1103,15 @@
 			</control>
 		</control>
 		<control type="group" id="10">
-			<posx>20</posx>
-			<posy>55r</posy>
+			<posx>10</posx>
+			<posy>37r</posy>
 			<include>Window_OpenClose_Animation</include>
 			<control type="button" id="20">
 				<description>Power push button</description>
 				<posx>55</posx>
 				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
+				<width>35</width>
+				<height>35</height>
 				<label>31003</label>
 				<font>-</font>
 				<aligny>-</aligny>
@@ -1119,8 +1127,8 @@
 				<description>Power Icon</description>
 				<posx>60</posx>
 				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
+				<width>25</width>
+				<height>25</height>
 				<aspectratio>keep</aspectratio>
 				<texture>icon_power.png</texture>
 			</control>
@@ -1128,8 +1136,8 @@
 				<description>Favourites push button</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
+				<width>35</width>
+				<height>35</height>
 				<label>1036</label>
 				<font>-</font>
 				<aligny>-</aligny>
@@ -1145,8 +1153,8 @@
 				<description>Favourites Icon</description>
 				<posx>5</posx>
 				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
+				<width>25</width>
+				<height>25</height>
 				<aspectratio>keep</aspectratio>
 				<texture>icon_favourites.png</texture>
 			</control>
