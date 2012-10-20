@@ -1,0 +1,114 @@
+<includes>	
+	<include name="Showcase_Music">
+		<control type="group">
+			<control type="image">
+				<posy>-420</posy>
+				<posx>0</posx>
+				<width>1380</width>
+				<height>750</height>
+				<texture>panels/contentpanel60.png</texture>
+			</control> 
+			<visible>Control.IsVisible(562)</visible>
+			<include>VisibleFadeEffect</include>
+			<posx>0</posx>
+			<posy>400</posy>
+			<control type="wraplist" id="562">
+				<visible>Container.Content(Albums) | Container.Content(Artists)</visible>
+				<hitrect x="0" y="-10" w="1280" h="190" />
+				<posx>-480</posx>
+				<posy>-200</posy>
+				<width>1820</width>
+				<height>1050</height>
+				<onleft>562</onleft>
+				<onright>562</onright>
+				<onup>2</onup>
+				<ondown>60</ondown>
+				<viewtype label="Showcase">fixed</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<focusposition>4</focusposition>
+				<movement>3</movement>
+				<orientation>horizontal</orientation>
+				<preloaditems>4</preloaditems>
+				<itemlayout height="285" width="285">
+					<control type="image">
+						<posx>0</posx>
+						<posy>142</posy>
+						<width>250</width>
+						<height>250</height>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture background="true" diffuse="masks/music_mask.png">$INFO[ListItem.Icon]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="290" width="290">
+					<control type="image">
+						<posx>0</posx>
+						<posy>142</posy>
+						<width>250</width>
+						<height>250</height>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture background="true" diffuse="masks/music_mask.png">$INFO[ListItem.Icon]</texture>
+						<animation reversible="false" effect="zoom" easing="out" tween="back" start="0,0,250,250" end="-15,-40,285,285" time="200">focus</animation>						
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="label">
+			<description>item label</description>
+			<posx>490</posx>
+			<posy>630</posy>
+			<width>600</width>
+			<height>28</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font28_title</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<visible>StringCompare(Control.GetLabel(37016),empty.png) + Control.IsVisible(562)</visible>
+			<visible>Container.Content(Artists)</visible>
+		</control>
+		<control type="label">
+			<description>item label</description>
+			<posx>490</posx>
+			<posy>630</posy>
+			<width>600</width>
+			<height>28</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font28_title</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<visible>!StringCompare(Control.GetLabel(37016),empty.png) + Control.IsVisible(562)</visible>
+			<visible>Container.Content(Albums)</visible>
+		</control>				
+		<control type="label">
+			<description>item label</description>
+			<posx>490</posx>
+			<posy>670</posy>
+			<width>600</width>
+			<height>28</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font28_title</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[ListItem.Artist]</label>
+			<visible>Container.Content(Albums)</visible>
+			<visible>StringCompare(Control.GetLabel(37016),empty.png) + Control.IsVisible(562)</visible>
+		</control>
+		<control type="image" id="37016">
+			<posx>650</posx>
+			<posy>605</posy>
+			<width>276</width>
+			<height>107</height>
+			<texture background="true" fallback="empty.png">D:/Musik/XBMC Datenbank/$INFO[ListItem.Artist]/logo.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="slide" end="-575,0"  condition="Container.Content(Albums)">conditional</animation>
+			<visible>Control.IsVisible(562)</visible>
+		</control>
+	</include>
+</includes>	
