@@ -13,7 +13,7 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>Skin.HasSetting(NoFloor)</visible>
+			<visible>!Skin.HasSetting(NoFloor)</visible>
 		</control>
 		<control type="image">
 			<description>LOGO</description>
@@ -25,7 +25,7 @@
 			<texture>xbmc-logo.png</texture>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<visible>!Skin.HasSetting(homepageWeatherinfo) + Skin.HasSetting(NoLogo)</visible>
+			<visible>!Skin.HasSetting(homepageWeatherinfo) + !Skin.HasSetting(NoLogo)</visible>
 		</control>
 		<!-- Music Info -->
 		<control type="group">
@@ -36,19 +36,37 @@
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<control type="image">
-				<description>Cover image</description>
-				<posx>20</posx>
-				<posy>45</posy>
-				<width>130</width>
-				<height>295</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-				<bordertexture border="8">ThumbBorder.png</bordertexture>
-				<bordersize>5</bordersize>
+				<description>Cd Disc</description>
+				<posx>115</posx>
+				<posy>150</posy>
+				<animation effect="slide" start="-118" end="0" time="900" tween="cubic" easing="out" delay="1000">WindowOpen</animation>
+				<animation type="WindowClose">
+					<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0"/>
+					<effect type="fade" start="100" end="0" time="1300"/>
+					<condition type="!Player.Playing"/>
+				</animation>
+				<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<width>180</width>
+				<height>180</height>
+				<posx>0</posx>
+				<posy>0</posy>
+				<texture fallback="cdart\default.png">$INFO[Player.FolderPath]cdart.png</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Skin.HasSetting(LowerMenu) + Skin.HasSetting(CdArtHome)</visible>
 			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<posx>5</posx>
+				<posy>135</posy>
+				<width>210</width>
+				<height>210</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture diffuse="masks/music_mask.png" fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+				<bordersize>5</bordersize>
+			</control>					
 			<control type="label">
 				<description>Album Label</description>
-				<posx>170</posx>
+				<posx>220</posx>
 				<posy>265</posy>
 				<height>25</height>
 				<width>1000</width>
@@ -58,10 +76,11 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<animation effect="slide" start="0,0" end="75,0" time="0" condition="Skin.HasSetting(CdArtHome)">Conditional</animation>
 			</control>
 			<control type="label">
 				<description>Title label</description>
-				<posx>170</posx>
+				<posx>220</posx>
 				<posy>285</posy>
 				<height>30</height>
 				<width>1000</width>
@@ -71,10 +90,11 @@
 				<font>font13_title</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<animation effect="slide" start="0,0" end="60,0" time="0" condition="Skin.HasSetting(CdArtHome)">Conditional</animation>
 			</control>
 			<control type="label">
 				<description>Time Label</description>
-				<posx>170</posx>
+				<posx>220</posx>
 				<posy>310</posy>
 				<height>30</height>
 				<width>300</width>
@@ -84,6 +104,7 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<animation effect="slide" start="0,0" end="35,0" time="0" condition="Skin.HasSetting(CdArtHome)">Conditional</animation>
 			</control>
 		</control>
 		<!-- LiveTV Info -->
@@ -742,56 +763,64 @@
 					<onleft>9010</onleft>
 					<onright>9010</onright>
 					<visible>Container(9000).HasFocus(2)</visible>
-					<include>HomeSubMenuVideos</include> <!-- Buttons for the grouplist -->
+					<include>HomeSubMenuVideos</include>
+					<!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9016">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9016</onleft>
 					<onright>9016</onright>
 					<visible>Container(9000).HasFocus(10)</visible>
-					<include>HomeSubMenuMovies</include> <!-- Buttons for the grouplist -->
+					<include>HomeSubMenuMovies</include>
+					<!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9017">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9017</onleft>
 					<onright>9017</onright>
 					<visible>Container(9000).HasFocus(11)</visible>
-					<include>HomeSubMenuTVShows</include> <!-- Buttons for the grouplist -->
+					<include>HomeSubMenuTVShows</include>
+					<!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9011">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9011</onleft>
 					<onright>9011</onright>
 					<visible>Container(9000).HasFocus(3)</visible>
-					<include>HomeSubMenuMusic</include> <!-- Buttons for the grouplist -->
+					<include>HomeSubMenuMusic</include>
+					<!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9012">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9012</onleft>
 					<onright>9012</onright>
 					<visible>Container(9000).HasFocus(5)</visible>
-					<include>HomeSubMenuSystem</include> <!-- Buttons for the grouplist -->
+					<include>HomeSubMenuSystem</include>
+					<!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9013">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9013</onleft>
 					<onright>9013</onright>
 					<visible>Container(9000).HasFocus(6)</visible>
-					<include>HomeSubMenuPlayDisc</include> <!-- Buttons for the grouplist -->
+					<include>HomeSubMenuPlayDisc</include>
+					<!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9014">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9014</onleft>
 					<onright>9014</onright>
 					<visible>Container(9000).HasFocus(12)</visible>
-					<include>HomeSubMenuLiveTV</include> <!-- Buttons for the grouplist -->
+					<include>HomeSubMenuLiveTV</include>
+					<!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9015">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9013</onleft>
 					<onright>9013</onright>
 					<visible>Container(9000).HasFocus(4)</visible>
-					<include>HomeSubMenuPictures</include> <!-- Buttons for the grouplist -->
+					<include>HomeSubMenuPictures</include>
+					<!-- Buttons for the grouplist -->
 				</control>
 			</control>
 			<control type="image">
