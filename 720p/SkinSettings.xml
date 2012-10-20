@@ -778,6 +778,18 @@
 						<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
 						<enable>Skin.HasSetting(UseCustomBackground)</enable>
 					</control>
+					<control type="radiobutton" id="313">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>SeparateBackdrops</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(SeparateBackdrops)</onclick>
+						<selected>Skin.HasSetting(SeparateBackdrops)</selected>
+					</control>					
 				</control>
 				<control type="group">
 					<control type="grouplist" id="9004">

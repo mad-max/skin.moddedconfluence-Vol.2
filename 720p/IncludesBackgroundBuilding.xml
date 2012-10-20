@@ -22,6 +22,17 @@
 			<visible>Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>300</fadetime>
+			<visible>Skin.HasSetting(SeparateBackdrops)</visible>
+		</control>		
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>

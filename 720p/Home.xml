@@ -929,21 +929,21 @@
 					<item id="7">
 						<label>8</label>
 						<onclick>ActivateWindow(Weather)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/weather.jpg</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
 					</item>
 					<item id="4">
 						<label>1</label>
 						<onclick>ActivateWindow(Pictures)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/pictures.jpg</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
 					<item id="12">
 						<label>31502</label>
 						<onclick>ActivateWindow(PVR)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/tv.jpg</icon>
 						<thumb>-</thumb>
 						<visible>System.GetBool(pvrmanager.enabled)</visible>
 					</item>
@@ -951,14 +951,14 @@
 						<label>3</label>
 						<onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
 						<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/videos.jpg</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 					</item>
 					<item id="26">
 						<description>HD Movies</description>
 						<label>HD Movies</label>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/hdmovies.jpg</icon>
 						<thumb>-</thumb>
 						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
 						<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies)</visible>
@@ -966,21 +966,21 @@
 					<item id="10">
 						<label>20342</label>
 						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/movies.jpg</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 					</item>
 					<item id="11">
 						<label>20343</label>
 						<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/tvshows.jpg</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 					</item>
 					<item id="3">
 						<label>2</label>
 						<onclick>ActivateWindow(Music)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/music.jpg</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
@@ -988,21 +988,21 @@
 						<label>0</label>
 						<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
 						<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/programs.jpg</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
 					<item id="6">
 						<label>341</label>
 						<onclick>XBMC.PlayDVD()</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/playdisc.jpg</icon>
 						<thumb>-</thumb>
 						<visible>System.HasMediaDVD</visible>
 					</item>
 					<item id="5">
 						<label>13000</label>
 						<onclick>ActivateWindow(Settings)</onclick>
-						<icon>-</icon>
+						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>-</thumb>
 					</item>
 				</content>
