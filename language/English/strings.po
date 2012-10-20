@@ -611,3 +611,13 @@ msgstr ""
 msgctxt "#31909"
 msgid "Fetching forecast info..."
 msgstr ""
+
+#Strings for Confluence-MOD Vol. 2 by mad-max
+
+msgctxt "#50000"
+msgid "MOD-Settings"
+msgstr "MOD-Settings"
+
+msgctxt "#50001"
+msgid "by mad-max"
+msgstr "by mad-max"

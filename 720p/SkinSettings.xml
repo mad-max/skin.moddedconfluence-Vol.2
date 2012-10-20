@@ -183,6 +183,11 @@
 						<label2>31200</label2>
 						<onclick>-</onclick>
 					</item>
+					<item id="5">
+						<label>50000</label>
+						<label2>50001</label2>
+						<onclick>-</onclick>
+					</item>					
 				</content>
 			</control>
 			<control type="image">
