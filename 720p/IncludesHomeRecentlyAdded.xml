@@ -505,14 +505,14 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>240</posx>
+				<posx>655</posx>
 				<posy>50</posy>
 				<visible>Library.HasContent(Music)</visible>
 				<visible>Container(9000).Hasfocus(3) + !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
-					<posx>160</posx>
+					<posx>60</posx>
 					<posy>220</posy>
 					<height>20</height>
 					<width>480</width>
@@ -529,7 +529,7 @@
 					<animation effect="slide" start="0,0" end="300,0" time="0" condition="StringCompare(Container(8002).NumItems,1)">conditional</animation>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>800</width>
+					<width>600</width>
 					<height>240</height>
 					<onleft>8002</onleft>
 					<onright>8002</onright>
@@ -649,7 +649,7 @@
 							<width>180</width>
 							<height>20</height>
 							<font>font12</font>
-							<textcolor>blue</textcolor>
+							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -752,26 +752,26 @@
 				</control>
 				<control type="button">
 					<description>left Arrow</description>
-					<posx>-40</posx>
+					<posx>-30</posx>
 					<posy>90</posy>
 					<width>30</width>
 					<height>40</height>
 					<texturefocus>arrow-big-left.png</texturefocus>
 					<texturenofocus>arrow-big-left.png</texturenofocus>
 					<onclick>Control.Move(8002,-1)</onclick>
-					<visible>Control.HasFocus(8002) + Container(8002).HasPrevious</visible>
+					<visible>Control.HasFocus(8002) + Container(8002).HasPrevious + !Skin.HasSetting(NoArrow)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
 					<description>right Arrow</description>
-					<posx>810</posx>
+					<posx>600</posx>
 					<posy>90</posy>
 					<width>30</width>
 					<height>40</height>
 					<texturefocus>arrow-big-right.png</texturefocus>
 					<texturenofocus>arrow-big-right.png</texturenofocus>
 					<onclick>Control.Move(8002,1)</onclick>
-					<visible>Control.HasFocus(8002) + Container(8002).HasNext</visible>
+					<visible>Control.HasFocus(8002) + Container(8002).HasNext + !Skin.HasSetting(NoArrow)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
