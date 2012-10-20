@@ -465,6 +465,7 @@
 			</control>
 		</control>
 		<include condition="!Skin.HasSetting(HomepageHideRecentlyAddedVideo) | !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)">HomeRecentlyAddedInfo</include>
+		<include condition="Skin.HasSetting(WeatherWidget)">WeatherWidget</include>
 		<control type="button" id="9003">
 			<description>Hidden Button to pass through navigation when recently added is disabled</description>
 			<posx>-20</posx>

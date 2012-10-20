@@ -579,6 +579,20 @@
 						<label2>[COLOR=selected]$INFO[Skin.String(CustomFocusOffset)][/COLOR]</label2>
 						<onclick>Skin.SetNumeric(CustomFocusOffset)</onclick>
 						<visible>Skin.HasSetting(customstartupfocus)</visible>
+					</control>
+					<control type="radiobutton" id="2009">
+						<description>Default focus</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>WeatherWidget</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<label>default focus</label>
+						<onclick>Skin.ToggleSetting(WeatherWidget)</onclick>
+						<selected>Skin.HasSetting(WeatherWidget)</selected>
 					</control>					
 					<control type="label" id="220">
 						<width>750</width>
