@@ -105,7 +105,7 @@
 			<posy>605</posy>
 			<width>276</width>
 			<height>107</height>
-			<texture background="true" fallback="empty.png">D:/Musik/XBMC Datenbank/$INFO[ListItem.Artist]/logo.png</texture>
+			<texture background="true" fallback="empty.png">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist]/logo.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="slide" end="-575,0"  condition="Container.Content(Albums)">conditional</animation>
 			<visible>Control.IsVisible(562)</visible>
