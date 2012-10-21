@@ -504,7 +504,8 @@
 				<height>35</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
-				<animation effect="slide" start="0,0" end="145,0" time="0" condition="!System.HasAddon(script.globalsearch)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="145,0" time="0" condition="!Skin.HasSetting(ActivateSearch)">Conditional</animation>
+				<visible>Skin.HasSetting(ActivateSearch) | Player.HasMedia</visible>
 			</control>
 			<control type="radiobutton" id="608">
 				<colordiffuse>CCFFFFFF</colordiffuse>
@@ -531,7 +532,7 @@
 				<onright>601</onright>
 				<onup>9003</onup>
 				<ondown>9000</ondown>
-				<visible>System.HasAddon(script.globalsearch)</visible>
+				<visible>System.HasAddon(script.globalsearch) + Skin.HasSetting(ActivateSearch)</visible>
 			</control>
 			<control type="group" id="600">
 				<posx>180</posx>
@@ -844,6 +845,70 @@
 				<texture>HomeOverlay1.png</texture>
 				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 			</control>
+<!--------- Database Statistic ------------------->			
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<visible>[Container(9000).HasFocus(3) | Container(9000).HasFocus(17) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)] + Skin.HasSetting(DatabaseStats) + !Player.HasMedia</visible>
+				<animation effect="slide" start ="320,0" end="0,0" time="300" delay="1200" condition="Container(9000).HasFocus(3) | Container(9000).HasFocus(17) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
+			<control type="image">
+				<posx>995</posx>
+				<posy>-25</posy>
+				<width>330</width>
+				<height>30</height>
+				<texture flipx="true" flipy="true">header.png</texture>
+			</control>
+			<control type="image">
+				<posx>1023</posx>
+				<posy>-50</posy>
+				<width>330</width>
+				<height>30</height>
+				<texture flipx="true" flipy="true">header.png</texture>
+				<visible>Container(9000).HasFocus(11)</visible>
+			</control>			
+			<control type="label">
+				<posx>980</posx>
+				<posy>-23</posy>
+				<width>300</width>
+				<label>Filme insgesamt: $INFO[Window(Home).Property(Movies.Count)]</label>
+				<align>center</align>
+				<visible>Container(9000).HasFocus(10)</visible>
+			</control>
+			<control type="label">
+				<posx>980</posx>
+				<posy>-23</posy>
+				<width>300</width>
+				<label>Folgen insgesamt: $INFO[Window(Home).Property(Episodes.Count)]</label>
+				<align>center</align>
+				<visible>Container(9000).HasFocus(11)</visible>
+			</control>
+			<control type="label">
+				<posx>990</posx>
+				<posy>-48</posy>
+				<width>300</width>
+				<label>Serien insgesamt: $INFO[Window(Home).Property(TVShows.Count)]</label>
+				<align>center</align>
+				<visible>Container(9000).HasFocus(11)</visible>
+			</control>			
+			<control type="label">
+				<posx>980</posx>
+				<posy>-23</posy>
+				<width>300</width>
+				<label>Alben insgesamt: $INFO[Window(Home).Property(Music.AlbumsCount)]</label>
+				<align>center</align>
+				<visible>Container(9000).HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<posx>980</posx>
+				<posy>-23</posy>
+				<width>300</width>
+				<label>Konzerte insgesamt: $INFO[Window(Home).Property(MusicVideos.Count)]</label>
+				<align>center</align>
+				<visible>Container(9000).HasFocus(17)</visible>
+			</control>
+			</control>
+<!-------- Database Statistic End ----------------->			
 			<control type="fixedlist" id="9000">
 				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 				<posx>-110</posx>
