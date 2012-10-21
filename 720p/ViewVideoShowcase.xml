@@ -191,8 +191,8 @@
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include>VideoMPAAFlaggingConditions</include>
-				<visible>Skin.HasSetting(germanmpaa) + Container.Content(Movies)</visible>
+				<include>VideoFSKFlaggingConditions</include>
+				<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="grouplist">
 				<description>MPAA Rating Flagging Images</description>
@@ -203,7 +203,7 @@
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VideoMPAAFlaggingConditions</include>
-				<visible>!Skin.HasSetting(germanmpaa) + !Skin.HasSetting(bbfc) + Container.Content(Movies)</visible>
+				<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="grouplist">
 				<description>MPAA Rating Flagging Images</description>
@@ -213,8 +213,8 @@
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include>VideoMPAAFlaggingConditions</include>
-				<visible>!Skin.HasSetting(germanmpaa) + Skin.HasSetting(bbfc) + Container.Content(Movies)</visible>
+				<include>VideoBBFCFlaggingConditions</include>
+				<visible>Container.Content(Movies)</visible>
 			</control>			
 		</control>
 		<control type="label">
