@@ -1007,6 +1007,14 @@
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
+					<item id="45">
+						<description>Custom FAV Five</description>
+						<label>$INFO[Skin.String(Menu_Custom9_Label)]</label>
+						<icon>special://skin/media/backgrounds/customfav2.jpg</icon>
+						<thumb>-</thumb>
+						<onclick>$INFO[Skin.String(Menu_Custom9_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom9)</visible>
+					</item>						
 					<item id="17">
 						<label>Concerts</label>
 						<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
@@ -1029,6 +1037,14 @@
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 					</item>
+					<item id="15">
+						<description>Custom Playlist 1</description>
+						<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+						<icon>special://skin/backgrounds/custom1.jpg</icon>
+						<thumb>-</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom1_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom1)</visible>
+					</item>
 					<item id="26">
 						<description>HD Movies</description>
 						<label>HD Movies</label>
@@ -1036,7 +1052,15 @@
 						<thumb>-</thumb>
 						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
 						<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies)</visible>
-					</item>					
+					</item>
+					<item id="44">
+						<description>Custom FAV Five</description>
+						<label>$INFO[Skin.String(Menu_Custom8_Label)]</label>
+						<icon>special://skin/media/backgrounds/customfav1.jpg</icon>
+						<thumb>-</thumb>
+						<onclick>$INFO[Skin.String(Menu_Custom8_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom8)</visible>
+					</item>	
 					<item id="10">
 						<label>20342</label>
 						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
@@ -1066,6 +1090,14 @@
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
+					<item id="16">
+						<description>Custom Playlist 2</description>
+						<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+						<icon>special://skin/backgrounds/custom2.jpg</icon>
+						<thumb>-</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom2_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom2)</visible>
+					</item>						
 					<item id="6">
 						<label>341</label>
 						<onclick>XBMC.PlayDVD()</onclick>
@@ -1096,58 +1128,6 @@
 				<height>60</height>
 				<texture flipx="true">SideFade.png</texture>
 				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
-			</control>
-		</control>
-		<control type="group" id="9002">
-			<onup>9001</onup>
-			<ondown>20</ondown>
-			<control type="fixedlist" id="700">
-				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(700).NumItems,2) | StringCompare(Container(700).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
-				<onleft>700</onleft>
-				<onright>700</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsVideos</include>
-				</content>
-			</control>
-			<control type="fixedlist" id="703">
-				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(703).NumItems,2) | StringCompare(Container(703).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(3)</visible>
-				<onleft>703</onleft>
-				<onright>703</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsMusic</include>
-				</content>
-			</control>
-			<control type="fixedlist" id="704">
-				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(704).NumItems,2) | StringCompare(Container(704).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(4)</visible>
-				<onleft>704</onleft>
-				<onright>704</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsPictures</include>
-				</content>
-			</control>
-			<control type="fixedlist" id="705">
-				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(705).NumItems,2) | StringCompare(Container(705).NumItems,4)">conditional</animation>
-				<visible>Container(9000).HasFocus(1)</visible>
-				<onleft>705</onleft>
-				<onright>705</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsPrograms</include>
-				</content>
 			</control>
 		</control>
 		<control type="group">
