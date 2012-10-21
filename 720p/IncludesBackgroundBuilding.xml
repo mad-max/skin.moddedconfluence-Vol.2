@@ -100,7 +100,7 @@
 			<texture>floor.png</texture>
 			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723)</visible>
+			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733)</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
