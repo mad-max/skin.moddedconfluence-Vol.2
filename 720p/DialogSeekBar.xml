@@ -80,10 +80,8 @@
 				<posy>260r</posy>
 				<width>300</width>
 				<height>230</height>
-				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+				<texture diffuse="masks/movie_mask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">ThumbShadow.png</bordertexture>
-				<bordersize>8</bordersize>
 				<visible>!VideoPlayer.Content(Movies)</visible>
 			</control>
 			<control type="image" id="1">
@@ -375,9 +373,8 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>Big_Text</font>
-			<label>PAUSE</label>
+			<label>$VAR[OSDText]</label>
 			<textcolor>33FFFFFF</textcolor>
-			<visible>Player.Paused</visible>
 			<!-- stoli - animation added -->
 			<animation type="Visible">
 				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
@@ -397,150 +394,5 @@
 			</animation>
 			<!-- stoli - animation end -->
 		</control>
-		<control type="label">
-			<posx>-320</posx>
-			<posy>320</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Big_Text</font>
-			<label>2x</label>
-			<textcolor>33FFFFFF</textcolor>
-			<visible>Player.Forwarding2x | Player.Rewinding2x</visible>
-			<!-- stoli - animation added -->
-			<animation type="Visible">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<!-- stoli - animation end -->
-		</control>
-		<control type="label">
-			<posx>-320</posx>
-			<posy>320</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Big_Text</font>
-			<label>4x</label>
-			<textcolor>33FFFFFF</textcolor>
-			<visible>Player.Forwarding4x | Player.Rewinding4x</visible>
-			<!-- stoli - animation added -->
-			<animation type="Visible">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<!-- stoli - animation end -->
-		</control>	
-		<control type="label">
-			<posx>-320</posx>
-			<posy>320</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Big_Text</font>
-			<label>8x</label>
-			<textcolor>33FFFFFF</textcolor>
-			<visible>Player.Forwarding8x | Player.Rewinding8x</visible>
-			<!-- stoli - animation added -->
-			<animation type="Visible">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<!-- stoli - animation end -->
-		</control>	
-		<control type="label">
-			<posx>-320</posx>
-			<posy>320</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Big_Text</font>
-			<label>16x</label>
-			<textcolor>33FFFFFF</textcolor>
-			<visible>Player.Forwarding16x | Player.Rewinding16x</visible>
-			<!-- stoli - animation added -->
-			<animation type="Visible">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<!-- stoli - animation end -->
-		</control>	
-		<control type="label">
-			<posx>-320</posx>
-			<posy>320</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Big_Text</font>
-			<label>32x</label>
-			<textcolor>33FFFFFF</textcolor>
-			<visible>Player.Forwarding32x | Player.Rewinding32x</visible>
-			<!-- stoli - animation added -->
-			<animation type="Visible">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<!-- stoli - animation end -->
-		</control>					
 	</controls>
 </window>
