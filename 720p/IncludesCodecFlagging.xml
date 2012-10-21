@@ -13,6 +13,23 @@
 		<value condition="substring(Listitem.mpaa,Rated R)">mpaa_restricted</value>
 		<value condition="substring(Listitem.mpaa,Rated NC)">mpaa_nc17</value>
 	</variable>
+	<variable name="fskrating">
+		<value condition="substring(listitem.mpaa,Rated 0 | substring(listitem.mpaa,FSK o.A.) | substring(listitem.mpaa,Germany:0) | substring(listitem.mpaa,ab 0)">Germany0</value>
+		<value condition="substring(listitem.mpaa,Rated 6 | substring(listitem.mpaa,FSK 6) | substring(listitem.mpaa,Germany:6) | substring(listitem.mpaa,ab 6)">Germany6</value>
+		<value condition="substring(listitem.mpaa,Rated 12 | substring(listitem.mpaa,FSK 12) | substring(listitem.mpaa,Germany:12) | substring(listitem.mpaa,ab 12)">Germany12</value>
+		<value condition="substring(Listitem.mpaa,Rated 16 | substring(listitem.mpaa,FSK 16) | substring(listitem.mpaa,Germany:16) | substring(listitem.mpaa,ab 16)">Germany16</value>
+		<value condition="substring(Listitem.mpaa,Rated 18 | substring(listitem.mpaa,FSK 18) | substring(listitem.mpaa,Germany:18) | substring(listitem.mpaa,ab 18)">Germany18</value>
+	</variable>
+	<variable name="bbfcrating">
+		<value condition="substring(listitem.mpaa,UK:U) + !substring(listitem.mpaa,UK:UC)">bbfc_u</value>
+		<value condition="substring(listitem.mpaa,UK:UC)">bbfc_uc</value>
+		<value condition="substring(listitem.mpaa,UK:PG) + !substring(listitem.mpaa,Rated PG-13)">bbfc_pg</value>
+		<value condition="substring(listitem.mpaa,UK:12) + !substring(listitem.mpaa,UK:12A)">bbfc_12</value>
+		<value condition="substring(Listitem.mpaa,UK:12A)">bbfc_12A</value>
+		<value condition="substring(Listitem.mpaa,UK:15)">bbfc_15</value>		
+		<value condition="substring(Listitem.mpaa,UK:18) + !substring(listitem.mpaa,UK:R18)">bbfc_18</value>
+		<value condition="substring(Listitem.mpaa,UK:R18)">bbfc_R18</value>
+	</variable>	
 		<variable name="videocodec">
 		<value condition="[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]">divx</value>
 		<value>$INFO[ListItem.VideoCodec]</value>
@@ -20,8 +37,8 @@
 	<include name="VideoCodecFlaggingConditions">
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>55</width>
-			<height>35</height>
+			<width>77</width>
+			<height>29</height>
 			<aspectratio align="right">keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
 		</control>
@@ -52,6 +69,24 @@
 			<texture>$VAR[rating,flagging/ratings/,.png]</texture>
 		</control>
 	</include>
+	<include name="VideoFSKFlaggingConditions">
+		<control type="image">
+			<description>Rating image</description>
+			<width>249</width>
+			<height>57</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$VAR[fskrating,flagging/ratings/,.png]</texture>
+		</control>
+	</include>	
+	<include name="VideoBBFCFlaggingConditions">
+		<control type="image">
+			<description>Rating image</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$VAR[bbfcrating,flagging/ratings/,.png]</texture>
+		</control>
+	</include>	
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
 			<description>Audio Codec Image</description>
