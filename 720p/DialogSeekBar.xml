@@ -75,60 +75,66 @@
 				<visible>!Skin.HasSetting(clearart)</visible>
 			</control>			
 			<control type="image" id="1">
-				<description>Cd Disc</description>
-					<animation effect="slide" start="-90" end="0" time="900" tween="cubic" easing="out" delay="1000">WindowOpen</animation>
-					<animation type="WindowClose">
-					<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0"/>
-					<effect type="fade" start="100" end="0" time="1300"/>
-					<condition type="!Player.Playing"/>
-					</animation>
-					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="Player.Paused + Skin.HasSetting(moviedisc)">Conditional</animation>
-					<width>200</width>
-					<height>200</height>
-					<posx>140</posx>
-					<posy>230r</posy>
-					<texture>$INFO[Player.FolderPath]cdart.png</texture>
-					<aspectratio align="bottom">keep</aspectratio>
-			</control>
-			<control type="image" id="1">
 				<description>cover image</description>
 				<posx>20</posx>
 				<posy>260r</posy>
 				<width>300</width>
 				<height>230</height>
-				<info>VideoPlayer.Cover</info>
+				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">ThumbBorder.png</bordertexture>
+				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>!VideoPlayer.Content(Movies)</visible>
 			</control>
 			<control type="image" id="1">
 				<description>Movie cover image</description>
-				<posx>-10</posx>
+				<posx>20</posx>
 				<posy>350r</posy>
 				<width>300</width>
 				<height>330</height>
-				<info>VideoPlayer.Cover</info>
+				<texture diffuse="masks/movie_mask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">ThumbBorder.png</bordertexture>
-				<bordersize>8</bordersize>
 				<visible>VideoPlayer.Content(Movies)</visible>
 			</control>
 			<control type="group" id="1">
 				<posx>330</posx>
-				<posy>175r</posy>
+				<posy>185r</posy>
 				<control type="label" id="1">
 					<description>Heading label</description>
-					<posx>10</posx>
-					<posy>-3</posy>
+					<posx>0</posx>
+					<posy>0</posy>
 					<width>910</width>
 					<height>25</height>
 					<align>left</align>
+					<aligny>center</aligny>
 					<font>font13</font>
 					<label>$LOCALIZE[31040]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="0,0" end="0,25" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)">conditional</animation>
+					<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
+					<animation effect="slide" start="0,0" end="0,25" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
+				</control>
+				<control type="image" id="1">
+					<posy>0</posy>
+					<width>50</width>
+					<height>25</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>PVR-IsRecording.png</texture>
+					<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Heading label</description>
+					<posx>50</posx>
+					<posy>0</posy>
+					<width>860</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<label>$LOCALIZE[19158]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
 				</control>
 				<control type="label" id="1">
 					<description>Studio label</description>
@@ -169,6 +175,19 @@
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.Content(MusicVideos)</visible>
 				</control>
+				<control type="label" id="1">
+					<description>LiveTV Info label</description>
+					<posx>20</posx>
+					<posy>30</posy>
+					<width>910</width>
+					<height>25</height>
+					<align>left</align>
+					<font>font12</font>
+					<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumber, - ([COLOR=blue],[/COLOR])]</label>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+				</control>
 				<control type="grouplist" id="1">
 					<posx>20</posx>
 					<posy>60</posy>
@@ -198,13 +217,28 @@
 					<font>font12</font>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
-					<visible>!Window.IsVisible(VideoOSD)</visible>
+					<visible>!Window.IsVisible(VideoOSD) + !VideoPlayer.Content(LiveTV)</visible>
+					<animation effect="fade" time="200">VisibleChange</animation>
+				</control>
+				<control type="label" id="1">
+					<posx>0</posx>
+					<posy>120</posy>
+					<width>910</width>
+					<height>25</height>
+					<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<scroll>true</scroll>
+					<visible>!Window.IsVisible(VideoOSD) + VideoPlayer.Content(LiveTV)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
 				</control>
 			</control>
 			<control type="group" id="1">
 				<posx>330</posx>
-				<posy>85r</posy>
+				<posy>95r</posy>
+				<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
 				<control type="label" id="1">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -231,7 +265,6 @@
 					<width>720</width>
 					<height>16</height>
 					<info>Player.Progress</info>
-					<visible>Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek | Player.Paused</visible>
 				</control>
 				<control type="label" id="1">
 					<posx>920</posx>
@@ -245,47 +278,47 @@
 				</control>
 			</control>
 		</control>
-				<control type="image" id="1">
-						<description>Video Resolution Image</description>
-						<posx>545</posx>
-						<posy>5</posy>
-						<width>77</width>
-						<height>29</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
-					</control>
-					<control type="image" id="1">
-						<description>Audio Codec Image</description>
-						<posx>750</posx>
-						<posy>5</posy>
-						<width>85</width>
-						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
-						<visible>!Player.HasAudio</visible>
-					</control>
-					<control type="image" id="1">
-						<description>Audio Channels Image</description>
-						<posx>850</posx>
-						<posy>5</posy>
-						<width>50</width>
-						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
-						<visible>!Player.HasAudio</visible>
-					</control>
-				<control type="image" id="1">
-					<posx>400</posx>
-					<posy>-10</posy>
-					<width>100</width>
-					<height>64</height>
-					<aspectratio>keep</aspectratio>
-					<align>center</align>
-					<aligny>center</aligny>
-					<texture>$INFO[VideoPlayer.Studio,flagging/studios/,.png]</texture>
-					<visible>!Player.HasAudio</visible>
-			</control>
-			<control type="image">
+		<control type="image" id="1">
+			<description>Video Resolution Image</description>
+			<posx>545</posx>
+			<posy>5</posy>
+			<width>77</width>
+			<height>29</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
+		</control>
+		<control type="image" id="1">
+			<description>Audio Codec Image</description>
+			<posx>750</posx>
+			<posy>5</posy>
+			<width>85</width>
+			<height>35</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
+			<visible>!Player.HasAudio</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Audio Channels Image</description>
+			<posx>850</posx>
+			<posy>5</posy>
+			<width>50</width>
+			<height>35</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
+			<visible>!Player.HasAudio</visible>
+		</control>
+		<control type="image" id="1">
+			<posx>400</posx>
+			<posy>-10</posy>
+			<width>100</width>
+			<height>64</height>
+			<aspectratio>keep</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+			<texture>$INFO[VideoPlayer.Studio,flagging/studios/,.png]</texture>
+			<visible>!Player.HasAudio</visible>
+		</control>
+		<control type="image">
 			<description>Bluray Image</description>
 			<posx>650</posx>
 			<posy>5</posy>
@@ -335,179 +368,179 @@
 			<texture>flagging/video/vhs.png</texture>
 			<visible>substring(Player.FilenameAndPath,vhs) + !Skin.HasSetting(HideFilenameFlagging)</visible>
 		</control>
-				<control type="label">
-					<posx>-320</posx>
-					<posy>320</posy>
-					<width>1920</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Big_Text</font>
-					<label>PAUSE</label>
-					<textcolor>33FFFFFF</textcolor>
-					<visible>Player.Paused</visible>
-				<!-- stoli - animation added -->
-					<animation type="Visible">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowOpen">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<!-- stoli - animation end -->
-				</control>
-				<control type="label">
-					<posx>-320</posx>
-					<posy>320</posy>
-					<width>1920</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Big_Text</font>
-					<label>2x</label>
-					<textcolor>33FFFFFF</textcolor>
-					<visible>Player.Forwarding2x | Player.Rewinding2x</visible>
-				<!-- stoli - animation added -->
-					<animation type="Visible">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowOpen">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<!-- stoli - animation end -->
-				</control>
-				<control type="label">
-					<posx>-320</posx>
-					<posy>320</posy>
-					<width>1920</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Big_Text</font>
-					<label>4x</label>
-					<textcolor>33FFFFFF</textcolor>
-					<visible>Player.Forwarding4x | Player.Rewinding4x</visible>
-				<!-- stoli - animation added -->
-					<animation type="Visible">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowOpen">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<!-- stoli - animation end -->
-				</control>	
-				<control type="label">
-					<posx>-320</posx>
-					<posy>320</posy>
-					<width>1920</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Big_Text</font>
-					<label>8x</label>
-					<textcolor>33FFFFFF</textcolor>
-					<visible>Player.Forwarding8x | Player.Rewinding8x</visible>
-				<!-- stoli - animation added -->
-					<animation type="Visible">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowOpen">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<!-- stoli - animation end -->
-				</control>	
-				<control type="label">
-					<posx>-320</posx>
-					<posy>320</posy>
-					<width>1920</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Big_Text</font>
-					<label>16x</label>
-					<textcolor>33FFFFFF</textcolor>
-					<visible>Player.Forwarding16x | Player.Rewinding16x</visible>
-				<!-- stoli - animation added -->
-					<animation type="Visible">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowOpen">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<!-- stoli - animation end -->
-				</control>	
-				<control type="label">
-					<posx>-320</posx>
-					<posy>320</posy>
-					<width>1920</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Big_Text</font>
-					<label>32x</label>
-					<textcolor>33FFFFFF</textcolor>
-					<visible>Player.Forwarding32x | Player.Rewinding32x</visible>
-				<!-- stoli - animation added -->
-					<animation type="Visible">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowOpen">
-						<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" />
-					</animation>
-					<!-- stoli - animation end -->
-				</control>					
+		<control type="label">
+			<posx>-320</posx>
+			<posy>320</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Big_Text</font>
+			<label>PAUSE</label>
+			<textcolor>33FFFFFF</textcolor>
+			<visible>Player.Paused</visible>
+			<!-- stoli - animation added -->
+			<animation type="Visible">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<!-- stoli - animation end -->
+		</control>
+		<control type="label">
+			<posx>-320</posx>
+			<posy>320</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Big_Text</font>
+			<label>2x</label>
+			<textcolor>33FFFFFF</textcolor>
+			<visible>Player.Forwarding2x | Player.Rewinding2x</visible>
+			<!-- stoli - animation added -->
+			<animation type="Visible">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<!-- stoli - animation end -->
+		</control>
+		<control type="label">
+			<posx>-320</posx>
+			<posy>320</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Big_Text</font>
+			<label>4x</label>
+			<textcolor>33FFFFFF</textcolor>
+			<visible>Player.Forwarding4x | Player.Rewinding4x</visible>
+			<!-- stoli - animation added -->
+			<animation type="Visible">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<!-- stoli - animation end -->
+		</control>	
+		<control type="label">
+			<posx>-320</posx>
+			<posy>320</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Big_Text</font>
+			<label>8x</label>
+			<textcolor>33FFFFFF</textcolor>
+			<visible>Player.Forwarding8x | Player.Rewinding8x</visible>
+			<!-- stoli - animation added -->
+			<animation type="Visible">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<!-- stoli - animation end -->
+		</control>	
+		<control type="label">
+			<posx>-320</posx>
+			<posy>320</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Big_Text</font>
+			<label>16x</label>
+			<textcolor>33FFFFFF</textcolor>
+			<visible>Player.Forwarding16x | Player.Rewinding16x</visible>
+			<!-- stoli - animation added -->
+			<animation type="Visible">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<!-- stoli - animation end -->
+		</control>	
+		<control type="label">
+			<posx>-320</posx>
+			<posy>320</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Big_Text</font>
+			<label>32x</label>
+			<textcolor>33FFFFFF</textcolor>
+			<visible>Player.Forwarding32x | Player.Rewinding32x</visible>
+			<!-- stoli - animation added -->
+			<animation type="Visible">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<!-- stoli - animation end -->
+		</control>					
 	</controls>
 </window>
