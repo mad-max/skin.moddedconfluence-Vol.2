@@ -2,6 +2,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<onload condition="Window.Previous(startup)+Skin.HasSetting(customstartupfocus)">Control.Move(9000,$INFO[Skin.String(CustomFocusOffset)])</onload>
+	<onload condition="!Skin.HasSetting(HomeMenuNoDocuButton)">XBMC.RunScript(script.randomandlastitems,limit=3,method=Last,playlist=special://skin/playlists/Doku.xsp,menu=Menu1)</onload>
 	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
 	<controls>
@@ -1068,6 +1069,14 @@
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 					</item>
+					<item id="27">
+						<description>Dokumentary</description>
+						<label>Dokus</label>
+						<icon>special://skin/backgrounds/documentary.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Docu_Folder)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Doku.xsp,return)</onclick>
+						<visible>!Skin.HasSetting(HomeMenuNoDocuButton) + Library.HasContent(Movies)</visible>
+					</item>					
 					<item id="11">
 						<label>20343</label>
 						<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
