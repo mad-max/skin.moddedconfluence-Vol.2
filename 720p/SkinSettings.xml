@@ -653,13 +653,14 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>DatabaseStats</label>
+						<label>DatabaseStats (needs deativated search)</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(DatabaseStats)</onclick>
 						<selected>Skin.HasSetting(DatabaseStats)</selected>
+						<enable>!Skin.HasSetting(ActivateSearch)</enable>
 					</control>	
 					<control type="radiobutton" id="2012">
 						<description>disable auto slideout of submenus</description>
