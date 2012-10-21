@@ -1,7 +1,7 @@
 <window id="25">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50,51,500,550,551,560,501,508,504,503,515,505,511,723,727</views>
+	<views>50,51,500,550,551,560,501,508,504,503,515,505,511,723,727,519</views>
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	<controls>
 		<include>CommonBackground</include>
@@ -23,6 +23,9 @@
 			<include>LiveTVView1</include> <!-- view id = 560 -->
 			<include>Landscape</include> <!-- view id = 723 -->
 			<include>HalfWall2</include> <!-- view id = 727 -->
+			<include>BannerWallView</include> <!-- view id = 519 -->
+			
+			
 		</control>
 		<include>CommonPageCount</include>
 		<include>CommonNowPlaying</include>

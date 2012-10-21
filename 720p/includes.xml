@@ -21,6 +21,7 @@
 	<include file="ViewVideoLandscape.xml" />
 	<include file="ViewVideoShowcase.xml" />
 	<include file="ViewsMusicLowList.xml" />
+	<include file="ViewsVideoBannerwall.xml" />
 	
 	<variable name="OSDText">
 		<value condition="Player.Paused">PAUSE</value>
@@ -168,7 +169,7 @@
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>system.getbool(input.enablemouse)</visible>
-			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733)</visible>
+			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519)</visible>
 			<control type="button">
 				<description>Back push button</description>
 				<posx>0</posx>
@@ -226,7 +227,7 @@
 	<include name="CommonNowPlaying">
 		<control type="group">
 			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733)</visible>
+			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
@@ -337,7 +338,7 @@
 	</include>
 	<include name="CommonPageCount">
 		<control type="group">
-			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733)</visible>
+			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519)</visible>
 			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 			<control type="label">
 				<description>Page Count Label</description>
