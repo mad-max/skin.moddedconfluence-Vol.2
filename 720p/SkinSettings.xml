@@ -183,6 +183,11 @@
 						<label2>31200</label2>
 						<onclick>-</onclick>
 					</item>
+					<item id="5">
+						<label>24000</label>
+						<label2>31200</label2>
+						<onclick>-</onclick>
+					</item>					
 				</content>
 			</control>
 			<control type="image">
@@ -381,18 +386,18 @@
 						<onclick>Skin.ToggleSetting(IntroMovie)</onclick>
 						<selected>Skin.HasSetting(IntroMovie)</selected>
 					</control>
-						<control type="button" id="1004">
-							<width>750</width>
-							<height>40</height>
-							<font>font13</font>
-							<label>Music_Folder_Path</label>
-							<label2>$INFO[Skin.String(Music_Folder_Path)]</label2>
-							<texturefocus>MenuItemFO.png</texturefocus>
-							<texturenofocus>MenuItemNF.png</texturenofocus>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<onclick>Skin.SetString(Music_Folder_Path)</onclick>
-						</control>
+					<control type="button" id="1004">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Music_Folder_Path</label>
+						<label2>$INFO[Skin.String(Music_Folder_Path)]</label2>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<onclick>Skin.SetString(Music_Folder_Path)</onclick>
+					</control>
 					<control type="radiobutton" id="1005">
 						<width>750</width>
 						<height>40</height>
@@ -1013,7 +1018,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-					<control type="radiobutton" id="555">
+						<control type="radiobutton" id="555">
 							<description>custom home playlist</description>
 							<width>750</width>
 							<height>40</height>
@@ -1097,7 +1102,7 @@
 							<onclick>Skin.SetFile(Menu_Custom2_Path,.xsp,special://videoplaylists)</onclick>
 							<visible>Skin.HasSetting(Menu_Custom2)</visible>
 						</control>
-<control type="radiobutton" id="507">
+						<control type="radiobutton" id="507">
 							<description>custom home 8</description>
 							<font>cirrus_20</font>
 							<width>750</width>
@@ -1183,7 +1188,7 @@
 							<onclick>ActivateWindow(1114)</onclick>
 							<visible>Skin.HasSetting(Menu_Custom9)</visible>
 						</control>									
-						</control>
+					</control>
 				</control>
 				<control type="scrollbar" id="61">
 					<posx>1060</posx>
@@ -1201,6 +1206,349 @@
 					<orientation>vertical</orientation>
 					<visible>Container(9000).Hasfocus(4)</visible>
 				</control>
+				<control type="group">
+					<posx>290</posx>
+					<posy>60</posy>
+					<visible>Container(9000).Hasfocus(5)</visible>
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>680</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>31109</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="9004">
+						<description>Menu Item Next Button</description>
+						<posx>670</posx>
+						<posy>53</posy>
+						<width>33</width>
+						<height>22</height>
+						<label>-</label>
+						<font>-</font>
+						<texturenofocus>scroll-down-2.png</texturenofocus>
+						<texturefocus>scroll-down-focus-2.png</texturefocus>
+						<onclick>Control.Move(9005,1)</onclick>
+						<onleft>9000</onleft>
+						<onright>9055</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+					</control>
+					<control type="button" id="9055">
+						<description>Menu Item Prev Button</description>
+						<posx>703</posx>
+						<posy>53</posy>
+						<width>33</width>
+						<height>22</height>
+						<label>-</label>
+						<font>-</font>
+						<texturenofocus>scroll-up-2.png</texturenofocus>
+						<texturefocus>scroll-up-focus-2.png</texturefocus>
+						<onclick>Control.Move(9005,-1)</onclick>
+						<onleft>9004</onleft>
+						<onright>9000</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+					</control>
+					<control type="list" id="9005">
+						<hitrect x="0" y="0" w="0" h="0" />
+						<posx>0</posx>
+						<posy>45</posy>
+						<width>750</width>
+						<height>40</height>
+						<onleft>9000</onleft>
+						<onright>300</onright>
+						<onup>9005</onup>
+						<ondown>9005</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<itemlayout height="1" width="750">
+						</itemlayout>
+						<focusedlayout height="40" width="750">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>750</width>
+								<height>40</height>
+								<texture>MenuItemNF.png</texture>
+								<visible>![Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>750</width>
+								<height>40</height>
+								<texture>MenuItemFO.png</texture>
+								<visible>[Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>600</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$LOCALIZE[31110]</label>
+								<visible>![Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>600</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>white</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$LOCALIZE[31110]</label>
+								<visible>[Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="label">
+								<posx>650</posx>
+								<posy>0</posy>
+								<width>640</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>![Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="label">
+								<posx>650</posx>
+								<posy>0</posy>
+								<width>640</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>white</textcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>[Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<label>3</label>
+								<label2>Home_Custom_Back_Video_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/videos.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+							</item>
+							<item id="10">
+								<label>20342</label>
+								<label2>Home_Custom_Back_Movies_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/videos.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
+								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+							</item>
+							<item id="11">
+								<label>20343</label>
+								<label2>Home_Custom_Back_TVShow_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/videos.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
+								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+							</item>
+							<item id="12">
+								<label>31502</label>
+								<label2>Home_Custom_Back_TV_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/tv.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
+								<visible>System.GetBool(pvrmanager.enabled)</visible>
+							</item>
+							<item id="35">
+								<label>HD-Filme</label>
+								<label2>Home_Custom_Back_HD_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/hdmovies.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_HD_Folder)]</thumb>
+							</item>
+							<item id="57">
+								<label>Dokus</label>
+								<label2>Home_Custom_Back_Docu_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/documentary.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Docu_Folder)]</thumb>
+							</item>
+							<item id="2">
+								<label>2</label>
+								<label2>Home_Custom_Back_Music_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/music.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+							</item>
+							<item id="9">
+								<label>40009</label>
+								<label2>Home_Custom_Back_MusicVideos_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/musicvideos.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_MusicVideos_Folder)]</thumb>
+							</item>
+							<item id="99">
+								<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+								<label2>Menu_Custom1_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/videos.jpg</icon>
+								<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom1)</visible>
+							</item>
+							<item id="199">
+								<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+								<label2>Menu_Custom2_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/videos.jpg</icon>
+								<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom2)</visible>
+							</item>
+							<item id="3">
+								<label>1</label>
+								<label2>Home_Custom_Back_Pictures_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/pictures.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+							</item>
+							<item id="4">
+								<label>0</label>
+								<label2>Home_Custom_Back_Programs_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/programs.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
+							</item>
+							<item id="5">
+								<label>8</label>
+								<label2>Home_Custom_Back_Weather_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/weather.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+							</item>
+							<item id="7">
+								<label>13000</label>
+								<label2>Home_Custom_Back_Settings_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/settings.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+							</item>
+							<item id="8">
+								<label>24001</label>
+								<label2>Home_Custom_Back_Addons_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/Addons.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Addons_Folder)]</thumb>
+							</item>
+							<item id="23">
+								<label>$INFO[Skin.String(Menu_Custom8_Label)]</label>
+								<label2>Home_Custom_Back_Fav_Folder</label2>
+								<onclick>-</onclick>
+								<icon>s$INFO[Skin.String(Menu_Custom8_Folder)]</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Fav_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom8)</visible>
+							</item>
+							<item id="24">
+								<label>$INFO[Skin.String(Menu_Custom9_Label)]</label>
+								<label2>Home_Custom_Back_Fav2_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/videos.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Fav2_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom9)</visible>
+							</item>							
+							<item id="9">
+								<label>341</label>
+								<label2>Home_Custom_Back_PlayDisc_Folder</label2>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/playdisc.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
+							</item>							
+						</content>
+					</control>
+					<control type="image">
+						<posx>85</posx>
+						<posy>100</posy>
+						<width>580</width>
+						<height>435</height>
+						<texture>black-back.png</texture>
+					</control>
+					<control type="group">
+						<posx>95</posx>
+						<posy>110</posy>
+						<control type="button" id="300">
+							<description>Single Image button</description>
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>180</width>
+							<height>40</height>
+							<label>Single</label>
+							<font>font12_title</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>center</align>
+							<texturenofocus border="5">button-nofocus.png</texturenofocus>
+							<texturefocus border="5">button-focus.png</texturefocus>
+							<onclick>Skin.SetImage($INFO[Container(9005).ListItem.Label2])</onclick>
+							<onleft>302</onleft>
+							<onright>301</onright>
+							<onup>9004</onup>
+							<ondown>9004</ondown>
+						</control>
+						<control type="button" id="301">
+							<description>Multi Image button</description>
+							<posx>190</posx>
+							<posy>0</posy>
+							<width>180</width>
+							<height>40</height>
+							<label>Multi</label>
+							<font>font12_title</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>center</align>
+							<texturenofocus border="5">button-nofocus.png</texturenofocus>
+							<texturefocus border="5">button-focus.png</texturefocus>
+							<onclick>Skin.SetPath($INFO[Container(9005).ListItem.Label2])</onclick>
+							<onleft>300</onleft>
+							<onright>302</onright>
+							<onup>9004</onup>
+							<ondown>9004</ondown>
+						</control>
+						<control type="button" id="302">
+							<description>Default Image button</description>
+							<posx>375</posx>
+							<posy>0</posy>
+							<width>180</width>
+							<height>40</height>
+							<label>571</label>
+							<font>font12_title</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>center</align>
+							<texturenofocus border="5">button-nofocus.png</texturenofocus>
+							<texturefocus border="5">button-focus.png</texturefocus>
+							<onclick>Skin.Reset($INFO[Container(9005).ListItem.Label2])</onclick>
+							<onleft>301</onleft>
+							<onright>300</onright>
+							<onup>9004</onup>
+							<ondown>9004</ondown>
+						</control>
+						<control type="multiimage">
+							<posx>0</posx>
+							<posy>50</posy>
+							<width>560</width>
+							<height>335</height>
+							<imagepath background="true">$INFO[Container(9005).ListItem.Icon]</imagepath>
+							<timeperimage>6000</timeperimage>
+							<randomize>true</randomize>
+							<fadetime>500</fadetime>
+						</control>
+					</control>
+				</control>	
 			</control>
 		</control>
 		<include>CommonNowPlaying</include>
