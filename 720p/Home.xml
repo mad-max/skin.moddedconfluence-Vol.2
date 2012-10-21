@@ -942,6 +942,13 @@
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
+					<item id="17">
+						<label>Concerts</label>
+						<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+						<icon>special://skin/backgrounds/musicvideos.jpg</icon>
+						<thumb>-</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
+					</item>					
 					<item id="12">
 						<label>31502</label>
 						<onclick>ActivateWindow(PVR)</onclick>
