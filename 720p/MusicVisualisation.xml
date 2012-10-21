@@ -236,6 +236,13 @@
 					<aligny>center</aligny>
 					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
 				</control>
+			<control type="image" id="1">
+				<posx>630</posx>
+				<posy>-100</posy>
+				<width>276</width>
+				<height>107</height>
+				<texture>$INFO[Skin.String(Music_Folder_Path)]$INFO[MusicPlayer.Artist]/logo.png</texture>
+		</control> 				
 			</control>
 		</control>
 		<!-- codec & viz infos -->
