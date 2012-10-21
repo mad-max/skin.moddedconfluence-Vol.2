@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.moddedconfluence2"
-  version="0."
+  version="0.5"
   name="Confluence-MOD Vol.2"
   provider-name="mad-max (credits Team-XBMC)">
   <requires>
@@ -15,12 +15,12 @@
     <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de">Confluence, ein Skin von Jezz_X. (XBMC standard Skin)</summary>
-    <summary lang="en">Confluence skin by Jezz_X. (XBMC's default skin)</summary>
-    <description lang="de">Confluence ist der standard Skin für XBMC 9.11 und später. Er ist eine Kombination mehrer unterschiedlicher Skin-Konzepte und versucht dabei die besten Ideen zu kombinieren, um einen einfachen Einstieg für neue XBMC-Nutzer zu ermöglichen.</description>
-    <description lang="en">Confluence is the default skin for XBMC 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time XBMC users to understand and use.</description>
-    <disclaimer lang="de">Confluence ist der standard Skin für XBMC. Die Deinstallation kann zu unerwünschten Nebeneffekten führen.</disclaimer>
-    <disclaimer lang="en">Confluence is the default skin for XBMC, removing it may cause issues</disclaimer>
+    <summary lang="en">Confluence-MOD Vol.II by mad-max</summary>
+    <summary lang="de">Confluence-MOD Vol.II von mad-max</summary>
+	<description lang="en">My Confluence-MOD came up as alternative for Skins, that were too heavy for ATV2 or ION-systems.[CR]Confluence as base is a fast skin, which became quite handsome because of severeal MODs like CDArt, Clearlogo and many others</description>
+	<description lang="de">Der Confluence-MOD entsand als Alternative zu den Skins, welche auf einem ATV2 oder ION-System zu schwerfällig waren.[CR]Confluence als Basis gibt einen schnellen Skin, welcher durch diverse MODs, z.B. CDArt, Clearlogo-Support [CR]und weitere zu einer schönen Augenweide geworden ist</description>    <disclaimer lang="de">Confluence ist der standard Skin für XBMC. Die Deinstallation kann zu unerwünschten Nebeneffekten führen.</disclaimer>
+    <disclaimer lang="en">Confluence is based on the work of Jezz_X and Team XBMC</disclaimer>
+	<disclaimer lang="de">Confluence basiert auf der Arbeit von Jezz_X und Team-XBMC</disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
