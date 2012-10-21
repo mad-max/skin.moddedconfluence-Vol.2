@@ -91,6 +91,11 @@
 			<filename>Roboto-Bold.ttf</filename>
 			<size>80</size>
 		</font>
+		<font>
+			<name>Big_Text</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<size>190</size>
+		</font>		
 	</fontset>
 
 	<fontset id="DefaultNoCaps" idloc="31391" unicode="true"> 
