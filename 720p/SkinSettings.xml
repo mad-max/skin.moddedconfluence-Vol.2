@@ -368,6 +368,18 @@
 						<selected>Skin.HasSetting(KioskMode)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>	
+					<control type="radiobutton" id="1003">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>IntroMovie</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(IntroMovie)</onclick>
+						<selected>Skin.HasSetting(IntroMovie)</selected>
 					</control>					
 				</control>
 				<control type="scrollbar" id="60">
