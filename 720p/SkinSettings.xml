@@ -660,7 +660,20 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(DatabaseStats)</onclick>
 						<selected>Skin.HasSetting(DatabaseStats)</selected>
-					</control>					
+					</control>	
+					<control type="radiobutton" id="2012">
+						<description>disable auto slideout of submenus</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>NoSlide</label>
+						<onclick>Skin.ToggleSetting(NoSlide)</onclick>
+						<selected>Skin.HasSetting(NoSlide)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>						
 					<control type="label" id="220">
 						<width>750</width>
 						<height>45</height>
@@ -924,7 +937,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(SeparateBackdrops)</onclick>
 						<selected>Skin.HasSetting(SeparateBackdrops)</selected>
-					</control>					
+					</control>	
 				</control>
 				<control type="group">
 					<control type="grouplist" id="9004">
