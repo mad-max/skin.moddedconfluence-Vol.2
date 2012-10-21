@@ -63,7 +63,7 @@
 				<height>107</height>
 				<texture background="false">$INFO[Player.FolderPath]logo.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<visible>!Skin.HasSetting(clearart)</visible>
+				<visible>!Skin.HasSetting(ClearArt)</visible>
 			</control>
 			<control type="image">
 				<posx>980</posx>
@@ -72,7 +72,7 @@
 				<height>107</height>
 				<texture background="false">$INFO[Player.FolderPath]clearart.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<visible>!Skin.HasSetting(clearart)</visible>
+				<visible>!Skin.HasSetting(ClearArt)</visible>
 			</control>			
 			<control type="image" id="1">
 				<description>cover image</description>

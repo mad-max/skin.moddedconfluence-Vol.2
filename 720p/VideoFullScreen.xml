@@ -62,6 +62,24 @@
 				<texture>HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="image" id="1">
+				<posx>980</posx>
+				<posy>530</posy>
+				<width>276</width>
+				<height>107</height>
+				<texture background="false">$INFO[Player.FolderPath]logo.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<visible>!Skin.HasSetting(ClearArt)</visible>
+			</control>
+			<control type="image" id="1">
+				<posx>980</posx>
+				<posy>530</posy>
+				<width>276</width>
+				<height>107</height>
+				<texture background="false">$INFO[Player.FolderPath]clearart.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<visible>!Skin.HasSetting(ClearArt)</visible>
+			</control>				
+			<control type="image" id="1">
 				<description>cover image</description>
 				<posx>20</posx>
 				<posy>260r</posy>
