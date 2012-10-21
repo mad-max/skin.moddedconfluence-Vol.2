@@ -187,6 +187,7 @@
 						<label>513</label>
 						<label2>Hintergründe</label2>
 						<onclick>-</onclick>
+						<visible>Skin.HasSetting(SeparateBackdrops)</visible>
 					</item>					
 				</content>
 			</control>
@@ -913,6 +914,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
 						<selected>Skin.HasSetting(UseCustomBackground)</selected>
+						<enable>!Skin.HasSetting(SeparateBackdrops)</enable>
 					</control>
 					<control type="button" id="312">
 						<width>750</width>
@@ -938,6 +940,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(SeparateBackdrops)</onclick>
 						<selected>Skin.HasSetting(SeparateBackdrops)</selected>
+						<enable>!Skin.HasSetting(UseCustomBackground)</enable>
 					</control>	
 				</control>
 				<control type="group">
