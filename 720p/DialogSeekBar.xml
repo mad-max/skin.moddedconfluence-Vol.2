@@ -55,6 +55,7 @@
 				<width>1280</width>
 				<height>230</height>
 				<texture>HomeNowPlayingBack.png</texture>
+				<visible>!Player.HasAudio</visible>
 			</control>
 			<control type="image">
 				<posx>980</posx>
@@ -64,6 +65,7 @@
 				<texture background="false">$INFO[Player.FolderPath]logo.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<visible>!Skin.HasSetting(ClearArt)</visible>
+				<visible>!Player.HasAudio</visible>
 			</control>
 			<control type="image">
 				<posx>980</posx>
@@ -83,6 +85,7 @@
 				<texture diffuse="masks/movie_mask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<visible>!VideoPlayer.Content(Movies)</visible>
+				<visible>!Player.HasAudio</visible>
 			</control>
 			<control type="image" id="1">
 				<description>Movie cover image</description>
@@ -97,6 +100,7 @@
 			<control type="group" id="1">
 				<posx>330</posx>
 				<posy>185r</posy>
+				<visible>!Player.HasAudio</visible>
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<posx>0</posx>
@@ -236,6 +240,7 @@
 			<control type="group" id="1">
 				<posx>330</posx>
 				<posy>95r</posy>
+				<visible>!Player.HasAudio</visible>
 				<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
 				<control type="label" id="1">
 					<posx>0</posx>
