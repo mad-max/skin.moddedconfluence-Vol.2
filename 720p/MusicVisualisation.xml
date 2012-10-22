@@ -1,5 +1,5 @@
 ﻿<window id="2006">
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol>999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="visualisation" id="2">
@@ -9,6 +9,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
+			<visible>!Skin.HasSetting(ArtistSlide)</visible>
 		</control>
 		<control type="image">
 			<description>Fanart Image for Artist</description>
@@ -21,6 +22,29 @@
 			<visible>!IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
 			<fadetime>600</fadetime>
 		</control>
+	<!-- artist slideshow -->
+		<control type="button" id="999">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>1</width>
+			<height>1</height>
+			<onfocus>RunScript(script.artistslideshow)</onfocus>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+			<aspectratio>stretch</aspectratio>
+			<timeperimage>4000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+			<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshowRefresh)) + Skin.HasSetting(ArtistSlide)</visible>
+		</control>
+		<!-- artist slideshow end -->		
 		<!-- media infos -->
 		<control type="group">
 			<animation effect="fade" time="200">VisibleChange</animation>
