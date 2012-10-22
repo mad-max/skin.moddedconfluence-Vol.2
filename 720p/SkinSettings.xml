@@ -411,6 +411,30 @@
 						<onclick>Skin.ToggleSetting(ClearArt)</onclick>
 						<selected>Skin.HasSetting(ClearArt)</selected>
 					</control>
+					<control type="radiobutton" id="1006">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>ExtraFanart</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(ExtraFanart)</onclick>
+						<selected>Skin.HasSetting(ExtraFanart)</selected>
+					</control>
+					<control type="radiobutton" id="1007">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>SeasonFanart</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(SeasonFanart)</onclick>
+						<selected>Skin.HasSetting(SeasonFanart)</selected>
+					</control>						
 				</control>
 				<control type="scrollbar" id="60">
 					<posx>1060</posx>
