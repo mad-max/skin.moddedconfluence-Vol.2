@@ -23,6 +23,9 @@
 	<include file="ViewsMusicLowList.xml" />
 	<include file="ViewsVideoBannerwall.xml" />
 	<include file="Views3dCoverView.xml" />
+	<include file="ViewsMusicFanart.xml" />
+	
+	
 	
 	
 	<variable name="OSDText">
@@ -171,7 +174,7 @@
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>system.getbool(input.enablemouse)</visible>
-			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519) + !Control.IsVisible(555)</visible>
+			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519) + !Control.IsVisible(555) + !Control.IsVisible(547)</visible>
 			<control type="button">
 				<description>Back push button</description>
 				<posx>0</posx>
@@ -229,7 +232,7 @@
 	<include name="CommonNowPlaying">
 		<control type="group">
 			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519) + !Control.IsVisible(555)</visible>
+			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519) + !Control.IsVisible(555) + !Control.IsVisible(547)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
@@ -340,7 +343,7 @@
 	</include>
 	<include name="CommonPageCount">
 		<control type="group">
-			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519) + !Control.IsVisible(555)</visible>
+			<visible>!Control.IsVisible(562) + !Control.IsVisible(727) + !Control.IsVisible(723) + !Control.IsVisible(733) + !Control.IsVisible(519) + !Control.IsVisible(555) + !Control.IsVisible(547)</visible>
 			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 			<control type="label">
 				<description>Page Count Label</description>
