@@ -173,15 +173,15 @@
 				</control>
 			</control>
 			<control type="image">
-					<width>100</width>
-					<height>64</height>
-					<posx>70</posx>
-					<posy>220</posy>
-					<aspectratio>keep</aspectratio>
-					<align>center</align>
-					<aligny>center</aligny>
-					<texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
-					<visible>!Container.Content(MusicVideos)</visible>
+				<width>100</width>
+				<height>64</height>
+				<posx>70</posx>
+				<posy>220</posy>
+				<aspectratio>keep</aspectratio>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
+				<visible>!Container.Content(MusicVideos)</visible>
 			</control>
 			<control type="grouplist">
 				<description>MPAA Rating Flagging Images</description>
@@ -218,25 +218,25 @@
 			</control>			
 		</control>
 		<control type="label">
-				<posx>15</posx>
-				<posy>465</posy>
-				<width>400</width>
-				<height>25</height>
-				<textcolor>white</textcolor>
-				<selectedcolor>selected</selectedcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>40035</label>
-				<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(showtrailer) + Control.HasFocus(727) | Control.HasFocus(666)</visible>
+			<posx>15</posx>
+			<posy>465</posy>
+			<width>400</width>
+			<height>25</height>
+			<textcolor>white</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>40035</label>
+			<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(ShowTrailer) + Control.HasFocus(727) | Control.HasFocus(666)</visible>
 		</control>
 		<control type="button" id="666">
-		<width>1</width>
-		<height>1</height>
-		<posx>-10</posx>
-		<posy>465</posy>
-		<onfocus>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</onfocus>
-		<onfocus>ActivateWindow(fullscreenvideo)</onfocus>
-		<visible>Skin.HasSetting(showtrailer)</visible>
+			<width>1</width>
+			<height>1</height>
+			<posx>-10</posx>
+			<posy>465</posy>
+			<onfocus>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</onfocus>
+			<onfocus>ActivateWindow(fullscreenvideo)</onfocus>
+			<visible>Skin.HasSetting(ShowTrailer)</visible>
 		</control>
 	</include>
 </includes>	

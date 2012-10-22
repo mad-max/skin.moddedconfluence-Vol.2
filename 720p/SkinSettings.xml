@@ -675,7 +675,7 @@
 						<selected>Skin.HasSetting(NoSlide)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>						
+					</control>	
 					<control type="label" id="220">
 						<width>750</width>
 						<height>45</height>
@@ -941,7 +941,19 @@
 						<onclick>Skin.ToggleSetting(SeparateBackdrops)</onclick>
 						<selected>Skin.HasSetting(SeparateBackdrops)</selected>
 						<enable>!Skin.HasSetting(UseCustomBackground)</enable>
-					</control>	
+					</control>
+					<control type="radiobutton" id="314">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>ShowTrailer</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(ShowTrailer)</onclick>
+						<selected>Skin.HasSetting(ShowTrailer)</selected>
+					</control>				
 				</control>
 				<control type="group">
 					<control type="grouplist" id="9004">
