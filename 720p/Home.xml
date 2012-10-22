@@ -1022,8 +1022,15 @@
 						<label>8</label>
 						<onclick>ActivateWindow(Weather)</onclick>
 						<icon>special://skin/backgrounds/weather.jpg</icon>
+						<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Day0.FanartCode)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + Skin.HasSetting(FanCode)</visible>
+					</item>
+					<item id="7">
+						<label>8</label>
+						<onclick>ActivateWindow(Weather)</onclick>
+						<icon>special://skin/backgrounds/weather.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !Skin.HasSetting(FanCode)</visible>
 					</item>
 					<item id="4">
 						<label>1</label>

@@ -711,7 +711,20 @@
 						<selected>Skin.HasSetting(NoSlide)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>	
+					</control>
+					<control type="radiobutton" id="2013">
+						<description>disable auto slideout of submenus</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>FanCode</label>
+						<onclick>Skin.ToggleSetting(FanCode)</onclick>
+						<selected>Skin.HasSetting(FanCode)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>					
 					<control type="label" id="220">
 						<width>750</width>
 						<height>45</height>
