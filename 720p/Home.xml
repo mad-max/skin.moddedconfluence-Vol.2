@@ -934,7 +934,7 @@
 			</control>
 			</control>
 <!-------- Database Statistic End ----------------->			
-			<control type="fixedlist" id="9000">
+			<control type="wraplist" id="9000">
 				<animation effect="slide" start="0,0" end="0,130" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
 				<posx>-110</posx>
 				<posy>5</posy>
@@ -1039,7 +1039,14 @@
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Fav2_Folder)]</thumb>
 						<onclick>$INFO[Skin.String(Menu_Custom9_Path)]</onclick>
 						<visible>Skin.HasSetting(Menu_Custom9)</visible>
-					</item>						
+					</item>
+					<item id="3">
+						<label>2</label>
+						<onclick>ActivateWindow(Music)</onclick>
+						<icon>special://skin/backgrounds/music.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+					</item>					
 					<item id="17">
 						<label>Concerts</label>
 						<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
@@ -1109,13 +1116,6 @@
 						<icon>special://skin/backgrounds/tvshows.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
-					</item>
-					<item id="3">
-						<label>2</label>
-						<onclick>ActivateWindow(Music)</onclick>
-						<icon>special://skin/backgrounds/music.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
 					<item id="1">
 						<label>0</label>
