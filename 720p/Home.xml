@@ -1060,6 +1060,14 @@
 						<icon>special://skin/backgrounds/musicvideos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_MusicVideos_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
+					</item>
+					<item id="26">
+						<description>HD Movies</description>
+						<label>HD Movies</label>
+						<icon>special://skin/backgrounds/hdmovies.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_HD_Folder)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+						<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies)</visible>
 					</item>					
 					<item id="12">
 						<label>31502</label>
@@ -1085,14 +1093,6 @@
 						<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
 						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom1_Path)],return)</onclick>
 						<visible>Skin.HasSetting(Menu_Custom1)</visible>
-					</item>
-					<item id="26">
-						<description>HD Movies</description>
-						<label>HD Movies</label>
-						<icon>special://skin/backgrounds/hdmovies.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_HD_Folder)]</thumb>
-						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
-						<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies)</visible>
 					</item>
 					<item id="44">
 						<description>Custom FAV Five</description>
