@@ -1055,7 +1055,7 @@
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>					
 					<item id="17">
-						<label>Concerts</label>
+						<label>50026</label>
 						<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
 						<icon>special://skin/backgrounds/musicvideos.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_MusicVideos_Folder)]</thumb>
