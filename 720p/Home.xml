@@ -896,7 +896,7 @@
 				<posx>980</posx>
 				<posy>-23</posy>
 				<width>300</width>
-				<label>Filme insgesamt: $INFO[Window(Home).Property(Movies.Count)]</label>
+				<label>$LOCALIZE[50031]: $INFO[Window(Home).Property(Movies.Count)]</label>
 				<align>center</align>
 				<visible>Container(9000).HasFocus(10)</visible>
 			</control>
@@ -904,7 +904,7 @@
 				<posx>980</posx>
 				<posy>-23</posy>
 				<width>300</width>
-				<label>Folgen insgesamt: $INFO[Window(Home).Property(Episodes.Count)]</label>
+				<label>$LOCALIZE[50032]: $INFO[Window(Home).Property(Episodes.Count)]</label>
 				<align>center</align>
 				<visible>Container(9000).HasFocus(11)</visible>
 			</control>
@@ -912,7 +912,7 @@
 				<posx>990</posx>
 				<posy>-48</posy>
 				<width>300</width>
-				<label>Serien insgesamt: $INFO[Window(Home).Property(TVShows.Count)]</label>
+				<label>$LOCALIZE[50033]: $INFO[Window(Home).Property(TVShows.Count)]</label>
 				<align>center</align>
 				<visible>Container(9000).HasFocus(11)</visible>
 			</control>			
@@ -920,7 +920,7 @@
 				<posx>980</posx>
 				<posy>-23</posy>
 				<width>300</width>
-				<label>Alben insgesamt: $INFO[Window(Home).Property(Music.AlbumsCount)]</label>
+				<label>$LOCALIZE[50034]: $INFO[Window(Home).Property(Music.AlbumsCount)]</label>
 				<align>center</align>
 				<visible>Container(9000).HasFocus(3)</visible>
 			</control>
@@ -928,7 +928,7 @@
 				<posx>980</posx>
 				<posy>-23</posy>
 				<width>300</width>
-				<label>Konzerte insgesamt: $INFO[Window(Home).Property(MusicVideos.Count)]</label>
+				<label>$LOCALIZE[50035]: $INFO[Window(Home).Property(MusicVideos.Count)]</label>
 				<align>center</align>
 				<visible>Container(9000).HasFocus(17)</visible>
 			</control>
@@ -1063,7 +1063,7 @@
 					</item>
 					<item id="26">
 						<description>HD Movies</description>
-						<label>HD Movies</label>
+						<label>50036</label>
 						<icon>special://skin/backgrounds/hdmovies.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_HD_Folder)]</thumb>
 						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
@@ -1111,7 +1111,7 @@
 					</item>
 					<item id="27">
 						<description>Dokumentary</description>
-						<label>Dokus</label>
+						<label>50037</label>
 						<icon>special://skin/backgrounds/documentary.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Docu_Folder)]</thumb>
 						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Doku.xsp,return)</onclick>

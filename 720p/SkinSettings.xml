@@ -185,7 +185,7 @@
 					</item>
 					<item id="5">
 						<label>513</label>
-						<label2>Hintergründe</label2>
+						<label2>50002</label2>
 						<onclick>-</onclick>
 						<visible>Skin.HasSetting(SeparateBackdrops)</visible>
 					</item>					
@@ -356,20 +356,20 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>CdArtVis</label>
+						<label>50003</label>
 						<onclick>Skin.ToggleSetting(CdArtVis)</onclick>
 						<selected>Skin.HasSetting(CdArtVis)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="1002">
-						<description>enable CDArt in Visualization</description>
+						<description>enable kiosk mode</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>KioskMode</label>
+						<label>50004</label>
 						<onclick>Skin.ToggleSetting(KioskMode)</onclick>
 						<selected>Skin.HasSetting(KioskMode)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -379,7 +379,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>IntroMovie</label>
+						<label>50005</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -391,7 +391,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>Music_Folder_Path</label>
+						<label>50006</label>
 						<label2>$INFO[Skin.String(Music_Folder_Path)]</label2>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -403,7 +403,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>ClearArt (currently leads to crash xbmc)</label>
+						<label>50007</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -415,7 +415,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>ExtraFanart</label>
+						<label>50008</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -427,7 +427,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>SeasonFanart</label>
+						<label>50009</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -439,7 +439,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>ArtistSlide</label>
+						<label>50010</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -506,7 +506,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>NoLogo</label>
+						<label>50011</label>
 						<onclick>Skin.ToggleSetting(NoLogo)</onclick>
 						<selected>Skin.HasSetting(NoLogo)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -519,7 +519,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>NoFloor</label>
+						<label>50012</label>
 						<onclick>Skin.ToggleSetting(NoFloor)</onclick>
 						<selected>Skin.HasSetting(NoFloor)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -532,7 +532,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>LowerMenu</label>
+						<label>50013</label>
 						<onclick>Skin.ToggleSetting(LowerMenu)</onclick>
 						<selected>Skin.HasSetting(LowerMenu)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -545,7 +545,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>CdArtHome</label>
+						<label>50014</label>
 						<onclick>Skin.ToggleSetting(CdArtHome)</onclick>
 						<selected>Skin.HasSetting(CdArtHome)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -558,7 +558,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>NoArrow</label>
+						<label>50015</label>
 						<onclick>Skin.ToggleSetting(NoArrow)</onclick>
 						<selected>Skin.HasSetting(NoArrow)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -571,7 +571,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>FanartInHome</label>
+						<label>50016</label>
 						<onclick>Skin.ToggleSetting(FanartInHome)</onclick>
 						<selected>Skin.HasSetting(FanartInHome)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -635,7 +635,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>customstartupfocus</label>
+						<label>50018</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -653,7 +653,7 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>			
-						<label>CustomFocusOffset</label>
+						<label>50019</label>
 						<label2>[COLOR=selected]$INFO[Skin.String(CustomFocusOffset)][/COLOR]</label2>
 						<onclick>Skin.SetNumeric(CustomFocusOffset)</onclick>
 						<visible>Skin.HasSetting(customstartupfocus)</visible>
@@ -663,12 +663,11 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>WeatherWidget</label>
+						<label>50020</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<label>default focus</label>
 						<onclick>Skin.ToggleSetting(WeatherWidget)</onclick>
 						<selected>Skin.HasSetting(WeatherWidget)</selected>
 					</control>
@@ -677,12 +676,11 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>ActivateSearch</label>
+						<label>50021</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<label>default focus</label>
 						<onclick>Skin.ToggleSetting(ActivateSearch)</onclick>
 						<selected>Skin.HasSetting(ActivateSearch)</selected>
 					</control>
@@ -690,7 +688,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>DatabaseStats (needs deativated search)</label>
+						<label>50022</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -706,7 +704,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>NoSlide</label>
+						<label>50023</label>
 						<onclick>Skin.ToggleSetting(NoSlide)</onclick>
 						<selected>Skin.HasSetting(NoSlide)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -719,11 +717,12 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>FanCode</label>
+						<label>50024</label>
 						<onclick>Skin.ToggleSetting(FanCode)</onclick>
 						<selected>Skin.HasSetting(FanCode)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<enable>!IsEmpty(Skin.String(WeatherFanartDir))</enable>
 					</control>					
 					<control type="label" id="220">
 						<width>750</width>
@@ -769,7 +768,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - HD MOVIES [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+						<label>$LOCALIZE[31111] - $LOCALIZE[50025] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoHDMoviesButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoHDMoviesButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -783,7 +782,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - Konzerte [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+						<label>$LOCALIZE[31111] - $LOCALIZE[50026] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideosButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoMusicVideosButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -982,7 +981,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>SeparateBackdrops</label>
+						<label>50027</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -995,7 +994,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
-						<label>ShowTrailer</label>
+						<label>50028</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -1112,7 +1111,7 @@
 						</control>
 						<control type="button" id="8207">
 							<description>Menu Movies Sub Custom4 Label</description>
-							<label>40017</label>
+							<label>50029</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Label)][/COLOR]</label2>
 							<width>750</width>
 							<height>40</height>
@@ -1126,7 +1125,7 @@
 						</control>
 						<control type="button" id="8208">
 							<description>Menu Movies Sub Custom4 Path</description>
-							<label>40016</label>
+							<label>50030</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Path)][/COLOR]</label2>
 							<width>750</width>
 							<height>40</height>
@@ -1154,7 +1153,7 @@
 						</control>
 						<control type="button" id="8209">
 							<description>custom home playlist 2</description>
-							<label>40017</label>
+							<label>50029</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
 							<width>750</width>
 							<height>40</height>
@@ -1168,7 +1167,7 @@
 						</control>
 						<control type="button" id="8210">
 							<description>Menu Movies Sub Custom4 Path</description>
-							<label>40016</label>
+							<label>50030</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Path)][/COLOR]</label2>
 							<width>750</width>
 							<height>40</height>
@@ -1192,7 +1191,7 @@
 							<label>Custom Favorite 1</label>
 							<onclick>Skin.ToggleSetting(Menu_Custom8)</onclick>
 							<selected>Skin.HasSetting(Menu_Custom8)</selected>
-							<enable>!Skin.HasSetting(Menu_Movies_Sub8)</enable>
+							<enable>System.HasAddon(script.favourites)</enable>
 						</control>
 						<control type="button" id="8215">
 							<description>Menu Movies Sub Custom8 Label</description>
@@ -1235,7 +1234,7 @@
 							<label>Custom Favorite 2</label>
 							<onclick>Skin.ToggleSetting(Menu_Custom9)</onclick>
 							<selected>Skin.HasSetting(Menu_Custom9)</selected>
-							<enable>!Skin.HasSetting(Menu_Movies_Sub9)</enable>
+							<enable>System.HasAddon(script.favourites)</enable>
 						</control>
 						<control type="button" id="8217">
 							<description>Menu Movies Sub Custom8 Label</description>

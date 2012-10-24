@@ -183,11 +183,11 @@ msgstr "Verstecke Hauptmenü Buttons"
 
 msgctxt "#31109"
 msgid "Enable Custom Background"
-msgstr ""
+msgstr "Definiere eigene Hintergründe"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr ""
+msgstr "Hintergrund für:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -243,7 +243,7 @@ msgstr "Songtexte"
 
 msgctxt "#31129"
 msgid "Hide Fanart in full screen visualization"
-msgstr ""
+msgstr "Verstecke Fanart in Visualisierung"
 
 msgctxt "#31132"
 msgid "Lyrics Add-on"
@@ -540,3 +540,161 @@ msgstr "Niederschlagswahrscheinlichkeit"
 msgctxt "#31909"
 msgid "Fetching forecast info..."
 msgstr "Lade Wetterbericht..."
+
+#Strings for Confluence-MOD Vol. 2 by mad-max
+
+msgctxt "#50000"
+msgid "MOD-Settings"
+msgstr "MOD-Settings"
+
+msgctxt "#50001"
+msgid "by mad-max"
+msgstr "von mad-max"
+
+msgctxt "#50002"
+msgid "Backgrounds"
+msgstr "Hintergründe"
+
+msgctxt "#50003"
+msgid "Enable CDArt in music visualization"
+msgstr "Aktivere CDArt in Visualisierung"
+
+msgctxt "#50004"
+msgid "Enable KIOSK mode"
+msgstr "Aktiviere KIOSK Modus"
+
+msgctxt "#50005"
+msgid "Enable support for "IntroMovie" addon"
+msgstr "Aktivere Support für das "IntroMovie" Addon"
+
+msgctxt "#50006"
+msgid "Set path for music directory (required for artist logo)"
+msgstr "Wähle den Pfad zu deinem Musik-Verzeichnis (benötigt für Artist-Logo)"
+
+msgctxt "#50007"
+msgid "Enable ClearArt (currently leads to crash of XBMC)"
+msgstr "Aktivere ClearArt (führt aktuell zum Crash von XBMC)"
+
+msgctxt "#50008"
+msgid "Enable Extrafanart for movies and TV shows"
+msgstr "Aktivere Extrafanart für Filme und Serien"
+
+msgctxt "#50009"
+msgid "Enable season fanart"
+msgstr "Aktivere Staffel-Fanart"
+
+msgctxt "#50010"
+msgid "Enable support for ArtistSlideshow Addon in music visualization"
+msgstr "Aktiviere ArtistSlideshow in Visualisierung"
+
+msgctxt "#50011"
+msgid "Hide XBMC logo in Home screen"
+msgstr "Verstecke XBMC Logo im Hauptmenü"
+
+msgctxt "#50012"
+msgid "Hide floor.png in Home screen"
+msgstr "Verstecke floor.png im Hauptmenü"
+
+msgctxt "#50013"
+msgid "Lowered menu bar in Home screen"
+msgstr "Senke Menüleiste im Hauptmenü"
+
+msgctxt "#50014"
+msgid "Enable CDArt in Home screen"
+msgstr "Aktiviere CDArt im Hauptmenü"
+
+msgctxt "#50015"
+msgid "Disable Arrows beside Recently Added Widget"
+msgstr "Verstecke Pfeile bei "Kürzlich hinzugefügt" Widgets"
+
+msgctxt "#50016"
+msgid "Show artist fanart in Home during playback"
+msgstr "Aktivere Interpreten Fanart im Hauptmenü"
+
+msgctxt "#50018"
+msgid "Enable custom focus for Home menu at startup"
+msgstr "Aktiviere Custom Fokus beim Start"
+
+msgctxt "#50019"
+msgid "Custom Offset"
+msgstr "Verschiebe um"
+
+msgctxt "#50020"
+msgid "Show weather widget in Home"
+msgstr "Aktivere Wetter Widget"
+
+msgctxt "#50021"
+msgid "Enable Search Button in Home"
+msgstr "Aktivere Suche (benötigt script.globalsearch)"
+
+msgctxt "#50022"
+msgid "Show database stats (needs disabled search button)"
+msgstr "Zeige Datenbank-Statistik"
+
+msgctxt "#50023"
+msgid "Disable slide out of submenu"
+msgstr "Deaktivere Slide des Submenüs"
+
+msgctxt "#50024"
+msgid "Show weather fanart based on current condition"
+msgstr "Zeige Wetterfanart basierend auf aktueller Wetterlage"
+
+msgctxt "#50025"
+msgid "HD-Movies"
+msgstr "HD-Filme"
+
+msgctxt "#50026"
+msgid "Concerts"
+msgstr "Konzerte"
+
+msgctxt "#50027"
+msgid "Use separate background in Home"
+msgstr "Separate Hintergründe im Hauptmenü"
+
+msgctxt "#50028"
+msgid "Show "trailer" label in Showcase View for movies"
+msgstr "Zeige "Trailer"-Label in Showcase Ansicht"
+
+msgctxt "#50029"
+msgid "Button label"
+msgstr "Beschriftung"
+
+msgctxt "#50030"
+msgid "Path"
+msgstr "Pfad"
+
+msgctxt "#50031"
+msgid "Movies total"
+msgstr "Filme insgesamt"
+
+msgctxt "#50032"
+msgid "Episodes total"
+msgstr "Folgen insgesamt"
+
+msgctxt "#50033"
+msgid "TV shows total"
+msgstr "TV-Serien insgesamt"
+
+msgctxt "#50034"
+msgid "Albums total"
+msgstr "Alben insgesamt"
+
+msgctxt "#50035"
+msgid "Concerts total"
+msgstr "Konzerte insgesamt"
+
+msgctxt "#50036"
+msgid "HD MOVIES"
+msgstr "HD-FILME"
+
+msgctxt "#50037"
+msgid "DOCUMENTARY"
+msgstr "DOKUS"
+
+msgctxt "#50038"
+msgid "Recently Added Documentaries"
+msgstr "Neu hinzugefügte Dokus"
+
+msgctxt "#50039"
+msgid "Recently Added Concerts"
+msgstr "Neu hinzugefügte Konzerte"
