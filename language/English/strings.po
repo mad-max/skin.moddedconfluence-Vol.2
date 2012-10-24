@@ -782,3 +782,10 @@ msgctxt "#50042"
 msgid "Documentary"
 msgstr ""
 
+msgctxt "#50043"
+msgid "Cover wall as vizualisation"
+msgstr ""
+
+msgctxt "#50044"
+msgid "Set cover directory..."
+msgstr ""

@@ -710,3 +710,11 @@ msgstr "Hauptmenü - Elemente"
 msgctxt "#50042"
 msgid "Documentary"
 msgstr "Dokumentationen"
+
+msgctxt "#50043"
+msgid "Cover wall as vizualisation"
+msgstr "CoverWall für Visualisierung"
+
+msgctxt "#50044"
+msgid "Cover directory"
+msgstr "Cover-Verzeichnis wählen..."
