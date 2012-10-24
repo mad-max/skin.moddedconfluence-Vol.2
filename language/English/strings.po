@@ -770,3 +770,15 @@ msgctxt "#50039"
 msgid "Recently Added Concerts"
 msgstr ""
 
+msgctxt "#50040"
+msgid "Recently Added Widgets"
+msgstr ""
+
+msgctxt "#50041"
+msgid "Home screen - elements"
+msgstr ""
+
+msgctxt "#50042"
+msgid "Documentary"
+msgstr ""
+

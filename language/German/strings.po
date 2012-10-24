@@ -183,7 +183,7 @@ msgstr "Verstecke Hauptmenü Buttons"
 
 msgctxt "#31109"
 msgid "Enable Custom Background"
-msgstr "Definiere eigene Hintergründe"
+msgstr "Definiere eigenen Hintergrund"
 
 msgctxt "#31110"
 msgid "Background path:"
@@ -698,3 +698,15 @@ msgstr "Neu hinzugefügte Dokus"
 msgctxt "#50039"
 msgid "Recently Added Concerts"
 msgstr "Neu hinzugefügte Konzerte"
+
+msgctxt "#50040"
+msgid "Recently Added Widgets"
+msgstr ""Neu hinzugefügte" Widgets"
+
+msgctxt "#50041"
+msgid "Home screen - elements"
+msgstr "Hauptmenü - Elemente"
+
+msgctxt "#50042"
+msgid "Documentary"
+msgstr "Dokumentationen"
