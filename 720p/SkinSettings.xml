@@ -1257,7 +1257,7 @@
 							<onclick>Skin.SetFile(Menu_Custom2_Path,.xsp,special://videoplaylists)</onclick>
 							<visible>Skin.HasSetting(Menu_Custom2)</visible>
 						</control>
-						<control type="radiobutton" id="507">
+		<!--				<control type="radiobutton" id="507">
 							<description>custom home 8</description>
 							<font>cirrus_20</font>
 							<width>750</width>
@@ -1342,7 +1342,7 @@
 							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom9_Path)</onclick>
 							<onclick>ActivateWindow(1114)</onclick>
 							<visible>Skin.HasSetting(Menu_Custom9)</visible>
-						</control>									
+						</control>			-->						
 					</control>
 				</control>
 				<control type="scrollbar" id="61">
