@@ -942,8 +942,9 @@
 				<height>60</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<onup condition="System.HasAddon(script.globalsearch)">608</onup>
-				<onup condition="!System.HasAddon(script.globalsearch)">603</onup>
+				<onup condition="!Player.HasMedia">9003</onup>
+				<onup condition="!Player.HasMedia + Skin.HasSetting(ActivateSearch)">608</onup>
+				<onup condition="Player.HasMedia">603</onup>
 				<ondown>9001</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
