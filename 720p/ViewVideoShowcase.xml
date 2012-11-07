@@ -33,11 +33,21 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<info>ListItem.Label</info>
+				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
+				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
 				<scroll>true</scroll>
 			</control>
 
 			<control type="wraplist" id="727">
 				<visible>Container.Content(Movies) | Container.Content(MusicVideos) | Container.Content(Genres)</visible>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="500" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
 				<posx>-35</posx>
 				<posy>40</posy>
 				<width>1320</width>
@@ -138,6 +148,8 @@
 			<control type="group">
 				<posx>-860</posx>
 				<posy>895</posy>
+				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
+				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
 				<visible>Container.Content(Movies) + Control.IsVisible(727)</visible>
 				<control type="grouplist">
 					<description>MPAA Flagging Conditions Images</description>
@@ -156,6 +168,8 @@
 			<control type="group">
 				<posx>-860</posx>
 				<posy>895</posy>
+				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
+				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
 				<visible>Container.Content(Movies)</visible>
 				<control type="grouplist">
 					<description>MPAA Flagging Conditions Images</description>
@@ -173,6 +187,8 @@
 				<height>64</height>
 				<posx>70</posx>
 				<posy>220</posy>
+				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
+				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
 				<aspectratio>keep</aspectratio>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -184,6 +200,8 @@
 				<posx>-635</posx>
 				<posy>220</posy>
 				<width>800</width>
+				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
+				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
@@ -195,6 +213,8 @@
 				<posx>-715</posx>
 				<posy>230</posy>
 				<width>800</width>
+				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
+				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
@@ -206,6 +226,8 @@
 				<posx>-730</posx>
 				<posy>225</posy>
 				<width>800</width>
+				<animation effect="slide" start="0,0" end="0,100" delay="0" time="300">WindowClose</animation>
+				<animation effect="slide" start="0,100" end="0,0" delay="0" time="300">WindowOpen</animation>
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
