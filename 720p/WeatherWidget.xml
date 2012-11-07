@@ -1,15 +1,18 @@
 <includes>
 	<include name="WeatherWidget">
 		<control type="group">
-					<animation type="Visible">
+			<animation type="Visible">
 				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="600" />
 			</animation>
-					<animation type="Hidden">
+			<animation type="Hidden">
+				<effect type="slide" start="0,0" end="0,-600" time="600" tween="cubic" easing="out"/>
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<animation type="WindowClose">
 				<effect type="slide" start="0,0" end="0,-600" time="600" tween="cubic" easing="out"/>
 				<effect type="fade" start="100" end="0" time="600" />
 			</animation>			
-
 			<visible>Container(9000).HasFocus(7) + Skin.HasSetting(LowerMenu)</visible>
 			<posx>400</posx>
 			<posy>60</posy>
