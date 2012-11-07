@@ -3,4 +3,5 @@
     <name>HD Movies</name>
     <match>all</match>
     <rule field="videoresolution" operator="greaterthan">700</rule>
+	<rule field="genre" operator="doesnotcontain">umenta</rule>
 </smartplaylist>
