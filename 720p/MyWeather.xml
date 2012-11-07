@@ -38,16 +38,6 @@
 				<label>$LOCALIZE[8]</label>
 			</control>
 		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>100r</posy>
-			<width>1280</width>
-			<height>100</height>
-			<texture>floor.png</texture>
-			<include>VisibleFadeEffect</include>
-			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
-		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
@@ -666,19 +656,6 @@
 					<orientation>vertical</orientation>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
-				<control type="label">
-					<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
-					<description>number of files/pages</description>
-					<posx>660</posx>
-					<posy>627</posy>
-					<width>570</width>
-					<font>font12</font>
-					<align>right</align>
-					<scroll>true</scroll>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>([COLOR=blue]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[12393] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
-				</control>
 			</control>
 			<control type="group">
 				<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
@@ -715,8 +692,6 @@
 				</control>
 			</control>
 		</control>
-		<include>CommonNowPlaying</include>
-		<include>MainWindowMouseButtons</include>
 		<control type="group">
 			<posx>-250</posx>
 			<include>SideBladeLeft</include>
