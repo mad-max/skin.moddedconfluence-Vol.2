@@ -52,7 +52,7 @@
 							<height>106</height>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
-							<texture background="true" diffuse="masks/banner_mask.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" diffuse="masks/banner_mask.png">$INFO[ListItem.Art(banner)]</texture>
 						</control>
 						<control type="image">
 						<posx>0</posx>
@@ -76,7 +76,7 @@
 							<height>106</height>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
-							<texture background="true" diffuse="masks/banner_mask.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" diffuse="masks/banner_mask.png">$INFO[ListItem.Art(banner)]</texture>
 							<animation effect="zoom" end="115" center="360,288" time="200">Focus</animation>
 						</control>
 					</control>
@@ -155,7 +155,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
 				</control>
-			<control type="largeimage" id="7914"> 
+			<control type="image" id="7914"> 
 					<posx>1270r</posx> 
 					<posy>-10</posy> 
 					<width>335</width> 
