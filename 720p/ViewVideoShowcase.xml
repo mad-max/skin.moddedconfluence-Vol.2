@@ -111,10 +111,10 @@
 						<height>168</height>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>200</fadetime>
-						<texture fallback="DefaultMovieGenre.jpg">moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="masks/movie_mask.png" fallback="DefaultMovieGenre.jpg">moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<visible>Window.IsActive(videolibrary) + Container.Content(Genres)</visible>
-						<animation reversible="false" effect="zoom" start="-2,16,120,160" end="-19,-10,148,198" time="200">focus</animation>
-						<animation reversible="false" effect="zoom" end="-2,16,120,160" start="-19,-10,148,198" time="200">unfocus</animation>
+						<animation reversible="false" effect="zoom" start="-2,16,120,160" end="-16,-60,178,248" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" end="-2,16,120,160" start="-16,-60,178,248" time="200">unfocus</animation>
 					</control>
 					<control type="image">
 						<posx>-2</posx>
