@@ -909,7 +909,7 @@
 				<visible>Container(9000).HasFocus(11)</visible>
 			</control>
 			<control type="label">
-				<posx>990</posx>
+				<posx>1005</posx>
 				<posy>-48</posy>
 				<width>300</width>
 				<label>$LOCALIZE[50033]: $INFO[Window(Home).Property(TVShows.Count)]</label>
