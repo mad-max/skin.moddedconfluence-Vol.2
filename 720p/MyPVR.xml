@@ -2,9 +2,17 @@
 	<defaultcontrol>32</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonBackground</include>
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<texture>special://skin/backgrounds/xbmctv.jpg</texture>
+			<include>VisibleFadeEffect</include>
+		</control>
 		<include>ContentPanelBackgroundsPVR</include>
-		<include>MainWindowMouseButtons</include>
 		<control type="image">
 			<description>Section header image</description>
 			<posx>20</posx>
@@ -62,7 +70,7 @@
 				<posy>5</posy>
 				<width>680</width>
 				<height>390</height>
-				<texture fallback="special://skin/backgrounds/tv.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
+				<texture fallback="special://skin/backgrounds/xbmctv.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
 				<include>VisibleFadeEffect</include>
 				<visible>!Player.HasVideo</visible>
 			</control>
@@ -116,7 +124,6 @@
 			<include>LiveTVGuideNowNextView</include> <!-- view id = 16 -->
 			<include>LiveTVSearchView</include> <!-- view id = 17 -->
 		</control>
-		<include>CommonNowPlaying</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 
