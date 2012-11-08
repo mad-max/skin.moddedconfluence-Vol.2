@@ -1050,7 +1050,7 @@
 					</item>
 					<item id="3">
 						<label>2</label>
-						<onclick>ActivateWindow(Music)</onclick>
+						<onclick>ActivateWindow(MusicLibrary, Artists, return)</onclick>
 						<icon>special://skin/backgrounds/music.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
@@ -1075,7 +1075,7 @@
 						<onclick>ActivateWindow(PVR)</onclick>
 						<onclick>Setfocus(32)</onclick>
 						<onclick>Setfocus(11)</onclick>
-						<icon>special://skin/backgrounds/tv.jpg</icon>
+						<icon>special://skin/backgrounds/xbmctv.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
 						<visible>System.GetBool(pvrmanager.enabled)</visible>
 					</item>
