@@ -233,6 +233,15 @@
 				<orientation>horizontal</orientation>
 				<include>VideoBBFCFlaggingConditions</include>
 				<visible>Container.Content(Movies)</visible>
+			</control>
+			<control type="image">
+				<posx>240</posx>
+				<posy>205</posy>
+				<width>75</width>
+				<height>75</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>flagging/3D.png</texture>
+				<visible>substring(ListItem.Genre,Abenteuer) | substring(ListItem.Label,3D)</visible>
 			</control>			
 		</control>
 		<control type="label">
