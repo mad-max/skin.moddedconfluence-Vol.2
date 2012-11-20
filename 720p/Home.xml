@@ -853,6 +853,17 @@
 					<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(noslide)">conditional</animation>
 					<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(noslide)">WindowClose</animation>
 				</control>
+				<control type="grouplist" id="9021">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9021</onleft>
+					<onright>9021</onright>
+					<visible>Container(9000).HasFocus(26)</visible>
+					<include>HomeSubMenuHDMovies</include>
+					<!-- Buttons for the grouplist -->
+					<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus + Skin.HasSetting(noslide)">conditional</animation>
+					<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(noslide)">conditional</animation>
+					<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(noslide)">WindowClose</animation>
+				</control>				
 			</control>
 			<control type="image">
 				<posx>-100</posx>
@@ -1110,6 +1121,13 @@
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 					</item>
+					<item id="6">
+						<label>341</label>
+						<onclick>XBMC.PlayDVD()</onclick>
+						<icon>special://skin/backgrounds/playdisc.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
+						<visible>System.HasMediaDVD</visible>
+					</item>					
 					<item id="27">
 						<description>Dokumentary</description>
 						<label>50037</label>
@@ -1141,13 +1159,6 @@
 						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom2_Path)],return)</onclick>
 						<visible>Skin.HasSetting(Menu_Custom2)</visible>
 					</item>						
-					<item id="6">
-						<label>341</label>
-						<onclick>XBMC.PlayDVD()</onclick>
-						<icon>special://skin/backgrounds/playdisc.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
-						<visible>System.HasMediaDVD</visible>
-					</item>
 					<item id="5">
 						<label>13000</label>
 						<onclick>ActivateWindow(Settings)</onclick>

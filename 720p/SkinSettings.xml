@@ -1342,7 +1342,192 @@
 							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom9_Path)</onclick>
 							<onclick>ActivateWindow(1114)</onclick>
 							<visible>Skin.HasSetting(Menu_Custom9)</visible>
-						</control>			-->						
+						</control>			-->		
+						<control type="label" id="4120">
+							<width>750</width>
+							<height>45</height>
+							<font>font13_title</font>
+							<label>Custom SumMenu Items (HD-Movies)</label>
+							<textcolor>blue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="559">
+							<description>custom home playlist</description>
+							<width>750</width>
+							<height>40</height>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<label>Custom Playlist 1</label>
+							<onfocus>Skin.SetString(HDMoviesCustom,2)</onfocus>
+							<onclick>Skin.ToggleSetting(HDMenu_Custom2)</onclick>
+							<selected>Skin.HasSetting(HDMenu_Custom2)</selected>
+							<enable>!Skin.HasSetting(HDMenu_Movies_Sub2)</enable>
+						</control>
+						<control type="button" id="8211">
+							<description>custom home playlist 2</description>
+							<label>50029</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(HDMenu_Custom2_Label)][/COLOR]</label2>
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetString(HDMenu_Custom2_Label)</onclick>
+							<visible>Skin.HasSetting(HDMenu_Custom2)</visible>
+						</control>
+						<control type="button" id="8212">
+							<description>Menu Movies Sub Custom4 Path</description>
+							<label>50030</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(HDMenu_Custom2_Path)][/COLOR]</label2>
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetFile(HDMenu_Custom2_Path,.xsp,special://videoplaylists)</onclick>
+							<visible>Skin.HasSetting(HDMenu_Custom2)</visible>
+						</control>	
+						<control type="radiobutton" id="560">
+							<description>custom home playlist</description>
+							<width>750</width>
+							<height>40</height>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<label>Custom Playlist 2</label>
+							<onfocus>Skin.SetString(HDMoviesCustom,3)</onfocus>
+							<onclick>Skin.ToggleSetting(HDMenu_Custom3)</onclick>
+							<selected>Skin.HasSetting(HDMenu_Custom3)</selected>
+							<enable>!Skin.HasSetting(HDMenu_Movies_Sub3)</enable>
+						</control>
+						<control type="button" id="8213">
+							<description>custom home playlist 2</description>
+							<label>50029</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(HDMenu_Custom3_Label)][/COLOR]</label2>
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetString(HDMenu_Custom3_Label)</onclick>
+							<visible>Skin.HasSetting(HDMenu_Custom3)</visible>
+						</control>
+						<control type="button" id="8214">
+							<description>Menu Movies Sub Custom4 Path</description>
+							<label>50030</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(HDMenu_Custom3_Path)][/COLOR]</label2>
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetFile(HDMenu_Custom3_Path,.xsp,special://videoplaylists)</onclick>
+							<visible>Skin.HasSetting(HDMenu_Custom3)</visible>
+						</control>	
+						<control type="radiobutton" id="561">
+							<description>custom home playlist</description>
+							<width>750</width>
+							<height>40</height>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<label>Custom Playlist 3</label>
+							<onfocus>Skin.SetString(HDMoviesCustom,4)</onfocus>
+							<onclick>Skin.ToggleSetting(HDMenu_Custom4)</onclick>
+							<selected>Skin.HasSetting(HDMenu_Custom4)</selected>
+							<enable>!Skin.HasSetting(HDMenu_Movies_Sub4)</enable>
+						</control>
+						<control type="button" id="8215">
+							<description>custom home playlist 2</description>
+							<label>50029</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(HDMenu_Custom4_Label)][/COLOR]</label2>
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetString(HDMenu_Custom4_Label)</onclick>
+							<visible>Skin.HasSetting(HDMenu_Custom4)</visible>
+						</control>
+						<control type="button" id="8216">
+							<description>Menu Movies Sub Custom4 Path</description>
+							<label>50030</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(HDMenu_Custom4_Path)][/COLOR]</label2>
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetFile(HDMenu_Custom4_Path,.xsp,special://videoplaylists)</onclick>
+							<visible>Skin.HasSetting(HDMenu_Custom4)</visible>
+						</control>
+						<control type="label" id="4122">
+							<width>750</width>
+							<height>45</height>
+							<font>font13_title</font>
+							<label>Custom Last.FM Items (Music)</label>
+							<textcolor>blue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="566">
+							<description>custom lastfm</description>
+							<width>750</width>
+							<height>40</height>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<label>Enable Last.FM</label>
+							<onclick>Skin.ToggleSetting(lastfm)</onclick>
+							<selected>Skin.HasSetting(lastfm)</selected>
+						</control>						
+						<control type="radiobutton" id="565">
+							<description>custom lastfm globaltag</description>
+							<width>750</width>
+							<height>40</height>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<label>Last.FM Radio</label>
+							<onfocus>Skin.SetString(lastfmtag,4)</onfocus>
+							<onclick>Skin.ToggleSetting(lastfmtag)</onclick>
+							<selected>Skin.HasSetting(lastfmtag)</selected>
+						</control>
+						<control type="button" id="8225">
+							<description>custom home playlist 2</description>
+							<label>Globaltag</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(lastfmtag_Label)][/COLOR]</label2>
+							<width>750</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetString(lastfmtag_Label)</onclick>
+							<visible>Skin.HasSetting(lastfmtag)</visible>
+						</control>						
 					</control>
 				</control>
 				<control type="scrollbar" id="61">

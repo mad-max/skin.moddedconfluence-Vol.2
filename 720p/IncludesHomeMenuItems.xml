@@ -45,6 +45,36 @@
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
+	<include name="HomeSubMenuHDMovies">
+		<control type="image" id="80161">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="80162">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Skin.String(HDMenu_Custom2_Label)]</label>
+			<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(HDMenu_Custom2_Path)],return)</onclick>
+			<visible>Skin.HasSetting(HDMenu_Custom2)</visible>
+		</control>
+		<control type="button" id="80163">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Skin.String(HDMenu_Custom3_Label)]</label>
+			<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(HDMenu_Custom3_Path)],return)</onclick>
+			<visible>Skin.HasSetting(HDMenu_Custom3)</visible>
+		</control>
+		<control type="button" id="80164">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Skin.String(HDMenu_Custom4_Label)]</label>
+			<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(HDMenu_Custom4_Path)],return)</onclick>
+			<visible>Skin.HasSetting(HDMenu_Custom4)</visible>
+		</control>		
+		<control type="image" id="80168">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>	
 	<include name="HomeSubMenuMovies">
 		<control type="image" id="90161">
 			<width>35</width>
@@ -129,7 +159,19 @@
 			<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
 			<visible>!Library.HasContent(Music)</visible>
 		</control>
-		<control type="image" id="90119">
+		<control type="button" id="90119">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Last.FM</label>
+			<onclick>ActivateWindow(MusicFiles,lastfm://)</onclick>
+			<visible>Skin.HasSetting(lastfm)</visible>
+		</control>
+		<control type="button" id="90120">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Last.FM Radio</label>
+			<onclick>PlayMedia(lastfm://globaltags/$INFO[Skin.String(lastfmtag_Label)])</onclick>
+			<visible>Skin.HasSetting(lastfmtag)</visible>
+		</control>		
+		<control type="image" id="90121">
 			<width>35</width>
 			<height>35</height>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
