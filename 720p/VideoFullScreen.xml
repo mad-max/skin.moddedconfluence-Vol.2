@@ -87,17 +87,17 @@
 				<height>230</height>
 				<texture diffuse="masks/movie_mask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<visible>!VideoPlayer.Content(Movies)</visible>
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(MusicVideos)</visible>
 			</control>
 			<control type="image" id="1">
 				<description>Movie cover image</description>
-				<posx>20</posx>
-				<posy>350r</posy>
-				<width>300</width>
-				<height>330</height>
+				<posx>0</posx>
+				<posy>320</posy>
+				<width>345</width>
+				<height>380</height>
 				<texture diffuse="masks/movie_mask.png" fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<visible>VideoPlayer.Content(Movies)</visible>
+				<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(MusicVideos)</visible>
 			</control>
 			<control type="group" id="1">
 				<posx>330</posx>
