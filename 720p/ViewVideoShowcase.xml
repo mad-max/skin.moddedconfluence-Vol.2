@@ -241,7 +241,7 @@
 				<height>75</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>flagging/3D.png</texture>
-				<visible>substring(ListItem.Genre,Abenteuer) | substring(ListItem.Label,3D)</visible>
+				<visible>substring(ListItem.Genre,3D) | substring(ListItem.Label,3D)</visible>
 			</control>			
 		</control>
 		<control type="label">
