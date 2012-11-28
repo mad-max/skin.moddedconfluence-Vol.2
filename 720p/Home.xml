@@ -1073,6 +1073,20 @@
 						<thumb>$INFO[Skin.String(Home_Custom_Back_MusicVideos_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
 					</item>
+					<item id="8213">
+						<label>$INFO[Skin.String(CustomFavourite1.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomFavourite1.Path)]</onclick>
+						<icon>special://skin/backgrounds/SKINDEFAULT.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Favourite1_Folder)]</thumb>
+						<visible>Skin.HasSetting(favourite1)</visible>
+					</item>
+					<item id="8214">
+						<label>$INFO[Skin.String(CustomFavourite2.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomFavourite2.Path)]</onclick>
+						<icon>special://skin/backgrounds/SKINDEFAULT.jpg</icon>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Favourite2_Folder)]</thumb>
+						<visible>Skin.HasSetting(favourite2)</visible>
+					</item>						
 					<item id="26">
 						<description>HD Movies</description>
 						<label>50036</label>
