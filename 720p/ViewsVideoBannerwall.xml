@@ -1,19 +1,19 @@
 <includes>
-<!-- ===================================================================================== -->
-<!-- ============================== BANNER WALL VIEW ID 519 ============================== -->
-<!-- =================================== TV Shows only =================================== -->
+	<!-- ===================================================================================== -->
+	<!-- ============================== BANNER WALL VIEW ID 519 ============================== -->
+	<!-- =================================== TV Shows only =================================== -->
 	<include name="BannerWallView">
-	<control type="image">
-		<posx>0</posx>
-		<posy>-30</posy>
-		<width>1380</width>
-		<height>820</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>ContentPanel60.png</texture>
-		<visible>Control.IsVisible(519)</visible>
-	</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>-30</posy>
+			<width>1380</width>
+			<height>820</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>ContentPanel60.png</texture>
+			<visible>Control.IsVisible(519)</visible>
+		</control>
 		<control type="group">
-		<visible>Control.IsVisible(519)</visible>
+			<visible>Control.IsVisible(519)</visible>
 			<!-- wall panel -->
 			<control type="wraplist" id="519">
 				<posx>660</posx>
@@ -33,18 +33,19 @@
 				<itemgap>1</itemgap>
 				<visible>Container.Content(TVShows)</visible>
 				<itemlayout height="140" width="575">
-					<control type="group"> <!-- banner mod -->
+					<control type="group">
+						<!-- banner mod -->
 						<posx>33</posx>
 						<posy>33</posy>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>575</width>
-						<height>106</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>black-back3.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
-					</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>575</width>
+							<height>106</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>black-back3.png</texture>
+							<colordiffuse>AAFFFFFF</colordiffuse>
+						</control>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -55,21 +56,22 @@
 							<texture background="true" diffuse="masks/banner_mask.png">$INFO[ListItem.Art(banner)]</texture>
 						</control>
 						<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>575</width>
-						<height>106</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>black-back3.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
-					</control>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>575</width>
+							<height>106</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>black-back3.png</texture>
+							<colordiffuse>AAFFFFFF</colordiffuse>
+						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="140" width="596">
 					<control type="group">	
 						<posx>0</posx>
 						<posy>63</posy>
-						<control type="image"> <!-- banner mod -->
+						<control type="image">
+							<!-- banner mod -->
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>575</width>
@@ -82,7 +84,7 @@
 					</control>
 				</focusedlayout>
 			</control>
- 	
+
 			<control type="image">
 				<posx>-5</posx>
 				<posy>570</posy>
@@ -155,16 +157,15 @@
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
 				</control>
-			<control type="image" id="7914"> 
+				<control type="image" id="7914"> 
 					<posx>1270r</posx> 
 					<posy>-10</posy> 
 					<width>335</width> 
 					<height>130</height> 
-					<texture>$INFO[ListItem.path]logo.png</texture> 
+					<texture>$INFO[ListItem.path]/logo.png</texture> 
 					<fadetime>100</fadetime> 
 					<aspectratio scalediffuse="false">keep</aspectratio> 
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-				</control>			
+				</control>
 			</control> 
 		</control>
 	</include>
