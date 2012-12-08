@@ -240,6 +240,7 @@
 					<height>107</height>
 					<texture background="false" fallback="logo/fallback.png">$INFO[ListItem.path]/logo.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" time="3000" delay="1500">WindowOpen</animation>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes)</visible>
@@ -249,6 +250,7 @@
 					<height>107</height>
 					<texture background="false" fallback="logo/fallback.png">$INFO[ListItem.path]../logo.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" time="3000" delay="1500">WindowOpen</animation>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes)</visible>
@@ -258,6 +260,7 @@
 					<height>107</height>
 					<texture background="false" fallback="logo/fallback.png">$INFO[ListItem.path]../../logo.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" time="3000" delay="1500">WindowOpen</animation>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes)</visible>
@@ -267,6 +270,7 @@
 					<height>107</height>
 					<texture background="false" fallback="logo/fallback.png">$INFO[ListItem.path]../../../logo.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" time="3000" delay="1500">WindowOpen</animation>
 				</control>
 				<control type="group">
 					<animation effect="slide" start="0,0" end="0,100" delay="500" time="500">WindowClose</animation>
