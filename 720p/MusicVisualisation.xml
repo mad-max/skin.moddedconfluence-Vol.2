@@ -35,7 +35,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-			<aspectratio>stretch</aspectratio>
+			<aspectratio>keep</aspectratio>
 			<timeperimage>4000</timeperimage>
 			<fadetime>1500</fadetime>
 			<randomize>true</randomize>
@@ -55,7 +55,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6300</timeperimage>
@@ -67,7 +67,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7700</timeperimage>
@@ -79,7 +79,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>8000</timeperimage>
@@ -91,7 +91,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6000</timeperimage>
@@ -103,7 +103,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4000</timeperimage>
@@ -115,7 +115,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5500</timeperimage>
@@ -127,7 +127,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5000</timeperimage>
@@ -139,7 +139,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6200</timeperimage>
@@ -151,7 +151,7 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6600</timeperimage>
@@ -163,7 +163,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6500</timeperimage>
@@ -175,7 +175,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7200</timeperimage>
@@ -187,7 +187,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5100</timeperimage>
@@ -199,7 +199,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5200</timeperimage>
@@ -211,7 +211,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4100</timeperimage>
@@ -223,7 +223,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5700</timeperimage>
@@ -235,7 +235,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4400</timeperimage>
@@ -247,7 +247,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6800</timeperimage>
@@ -259,7 +259,7 @@
 				<posy>150</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7800</timeperimage>
@@ -271,7 +271,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>8100</timeperimage>
@@ -283,7 +283,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4900</timeperimage>
@@ -295,7 +295,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5300</timeperimage>
@@ -307,7 +307,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4500</timeperimage>
@@ -319,7 +319,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7000</timeperimage>
@@ -331,7 +331,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6400</timeperimage>
@@ -343,7 +343,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>8300</timeperimage>
@@ -355,7 +355,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7500</timeperimage>
@@ -367,7 +367,7 @@
 				<posy>300</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6900</timeperimage>
@@ -379,7 +379,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4200</timeperimage>
@@ -391,7 +391,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5800</timeperimage>
@@ -403,7 +403,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5600</timeperimage>
@@ -415,7 +415,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7300</timeperimage>
@@ -427,7 +427,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4700</timeperimage>
@@ -439,7 +439,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4800</timeperimage>
@@ -451,7 +451,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5400</timeperimage>
@@ -463,7 +463,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7100</timeperimage>
@@ -475,7 +475,7 @@
 				<posy>450</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5200</timeperimage>
@@ -487,7 +487,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7600</timeperimage>
@@ -499,7 +499,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4300</timeperimage>
@@ -511,7 +511,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>5900</timeperimage>
@@ -523,7 +523,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6100</timeperimage>
@@ -535,7 +535,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>8200</timeperimage>
@@ -547,7 +547,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>6700</timeperimage>
@@ -559,7 +559,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>4600</timeperimage>
@@ -571,7 +571,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7900</timeperimage>
@@ -583,7 +583,7 @@
 				<posy>600</posy>
 				<width>150</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<timeperimage>7400</timeperimage>
@@ -753,7 +753,7 @@
 							<posy>0</posy>
 							<width>110</width>
 							<height>35</height>
-							<aspectratio align="left">stretch</aspectratio>
+							<aspectratio align="left">keep</aspectratio>
 							<texture border="5">flagging/blank.png</texture>
 						</control>
 						<control type="image">
