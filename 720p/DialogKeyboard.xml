@@ -470,7 +470,7 @@
 					<height>50</height>
 					<label>20179</label>
 					<onleft>76</onleft>
-					<onright>75</onright>
+					<onright>65</onright>
 					<onup>302</onup>
 					<ondown>304</ondown>
 					<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
