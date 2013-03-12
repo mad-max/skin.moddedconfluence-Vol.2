@@ -1,3 +1,19 @@
+[B]0.7[/B]
+
+- readded addon shortcuts below home menu
+- fixed extended weather
+- added OpenElec settings entry to system sub menu
+- removed lastFM support
+- fixed diffuse fanart in home while playing music
+- fixed backdrop chooser for movies and tv shows
+- changed DialogKeyboard to qwertz
+- changed behaviour of debug stats
+
+
+[B]0.6[/B]
+
+- fixed XBMC GUI version to 4.0.0
+
 [B]0.5[/B]
 
 - Initial Commit to GIT and first release
