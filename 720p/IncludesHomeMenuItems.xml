@@ -190,20 +190,26 @@
 		</control>
 		<control type="button" id="90123">
 			<include>ButtonHomeSubCommonValues</include>
+			<label>OpenElec</label>
+			<onclick>RunAddon(os.openelec.settings)</onclick>
+			<visible>System.HasAddon(os.openelec.settings)</visible>
+		</control>		
+		<control type="button" id="90124">
+			<include>ButtonHomeSubCommonValues</include>
 			<label>7</label>
 			<onclick>ActivateWindow(FileManager)</onclick>
 		</control>
-		<control type="button" id="90124">
+		<control type="button" id="90125">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>13200</label>
 			<onclick>ActivateWindow(Profiles)</onclick>
 		</control>
-		<control type="button" id="90125">
+		<control type="button" id="90126">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>130</label>
 			<onclick>ActivateWindow(SystemInfo)</onclick>
 		</control>
-		<control type="image" id="90126">
+		<control type="image" id="90127">
 			<width>35</width>
 			<height>35</height>
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
