@@ -70,7 +70,6 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture background="true">$INFO[Player.Art(fanart)]</texture>
-			<colordiffuse>AAFFFFFF</colordiffuse>
 			<visible>!IsEmpty(Player.Art(fanart)) + Skin.HasSetting(FanartInHome) + Player.HasAudio</visible>
 			<fadetime>600</fadetime>
 		</control>			
