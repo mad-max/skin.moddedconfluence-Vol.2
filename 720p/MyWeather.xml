@@ -1,6 +1,7 @@
 <window id="2600">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="multiimage">
@@ -37,6 +38,16 @@
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[8]</label>
 			</control>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>100r</posy>
+			<width>1280</width>
+			<height>100</height>
+			<texture>floor.png</texture>
+			<include>VisibleFadeEffect</include>
+			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
@@ -322,7 +333,7 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[33027] : [COLOR=white]$INFO[Window.Property(Current.Sunrise)][/COLOR]</label>
+						<label>$LOCALIZE[33027] : [COLOR=white]$INFO[Window.Property(Today.Sunrise)][/COLOR]</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -335,7 +346,7 @@
 						<font>font13</font>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[33028] : [COLOR=white]$INFO[Window.Property(Current.Sunset)][/COLOR]</label>
+						<label>$LOCALIZE[33028] : [COLOR=white]$INFO[Window.Property(Today.Sunset)][/COLOR]</label>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -535,7 +546,7 @@
 						<item>
 							<label>$LOCALIZE[31909]</label>
 							<icon>-</icon>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>!Weather.IsFetched</visible>
 						</item>
 						<item>
@@ -545,7 +556,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day0.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day0.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day0.Title))</visible>
 						</item>
 						<item>
@@ -555,7 +566,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day1.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day1.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day1.Title))</visible>
 						</item>
 						<item>
@@ -565,7 +576,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day2.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day2.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day2.Title))</visible>
 						</item>
 						<item>
@@ -575,7 +586,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day3.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day3.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day3.Title))</visible>
 						</item>
 						<item>
@@ -585,7 +596,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day4.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day4.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day4.Title))</visible>
 						</item>
 						<item>
@@ -595,7 +606,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day5.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day5.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day5.Title))</visible>
 						</item>
 						<item>
@@ -605,7 +616,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day6.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day6.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day6.Title))</visible>
 						</item>
 						<item>
@@ -615,7 +626,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day7.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day7.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day7.Title))</visible>
 						</item>
 						<item>
@@ -625,7 +636,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day8.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day8.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day8.Title))</visible>
 						</item>
 						<item>
@@ -635,7 +646,7 @@
 							<property name="LowTemp">$INFO[Window.Property(Day9.LowTemp)]</property>
 							<property name="Outlook">$INFO[Window.Property(Day9.Outlook)]</property>
 							<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day9.Title))</visible>
 						</item>
 					</content>
@@ -655,6 +666,19 @@
 					<showonepage>true</showonepage>
 					<orientation>vertical</orientation>
 					<visible>Control.IsVisible(50)</visible>
+				</control>
+				<control type="label">
+					<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+					<description>number of files/pages</description>
+					<posx>660</posx>
+					<posy>627</posy>
+					<width>570</width>
+					<font>font12</font>
+					<align>right</align>
+					<scroll>true</scroll>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>([COLOR=blue]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[12393] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
 				</control>
 			</control>
 			<control type="group">
@@ -684,14 +708,16 @@
 					<texture>GlassTitleBar.png</texture>
 				</control>
 				<control type="group" id="50">
-					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather+10DayForcast</include>
-					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather+36HourForcast</include>
-					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather+WeekendForcast</include>
-					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather+HourlyForcast</include>
-					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather+MapsVideo</include>
+					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather10DayForcast</include>
+					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">Weather36HourForcast</include>
+					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherWeekendForcast</include>
+					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherHourlyForcast</include>
+					<include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherMapAlerts</include>
 				</control>
 			</control>
 		</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
 		<control type="group">
 			<posx>-250</posx>
 			<include>SideBladeLeft</include>
@@ -748,7 +774,7 @@
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31904</label>
-					<onclick>ClearProperty(Weather.CurrentView)</onclick>
+					<onfocus>ClearProperty(Weather.CurrentView)</onfocus>
 					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
 				</control>
 				<control type="button" id="303">
@@ -756,7 +782,7 @@
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31901</label>
-					<onclick>SetProperty(Weather.CurrentView,36hour)</onclick>
+					<onfocus>SetProperty(Weather.CurrentView,36hour)</onfocus>
 					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
 				</control>
 				<control type="button" id="304">
@@ -764,7 +790,7 @@
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31903</label>
-					<onclick>SetProperty(Weather.CurrentView,weekend)</onclick>
+					<onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
 					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
 				</control>
 				<control type="button" id="305">
@@ -772,15 +798,15 @@
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31902</label>
-					<onclick>SetProperty(Weather.CurrentView,hourly)</onclick>
+					<onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
 					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
 				</control>
 				<control type="button" id="306">
-					<description>Hourly forcast button</description>
+					<description>Map and Alert  button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>31906</label>
-					<onclick>SetProperty(Weather.CurrentView,maps)</onclick>
+					<label>31910</label>
+					<onfocus>SetProperty(Weather.CurrentView,map)</onfocus>
 					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
 				</control>
 				<control type="label" id="201">
